@@ -1,0 +1,92 @@
+.journey { display: grid; gap: 20px; min-width: 0; }
+.definitions { position: absolute; width: 0; height: 0; overflow: hidden; }
+.intro { position: relative; isolation: isolate; display: flex; align-items: end; justify-content: space-between; gap: 24px; min-height: 188px; padding: 30px; overflow: hidden; border-radius: 18px; background: #16213d; color: #fff; box-shadow: 0 14px 30px #1d2a4b20; }
+.intro::before { position: absolute; z-index: -1; inset: 0; background: radial-gradient(ellipse at 90% 0%, #655bcd70, transparent 42%), linear-gradient(110deg, #142039, #293761); content: ""; }
+.introCopy { position: relative; z-index: 1; max-width: 640px; }
+.introCopy h2 { margin: 0; color: #fff; font-size: 27px; line-height: 1.25; letter-spacing: -.02em; }
+.introCopy p { margin: 9px 0 0; color: #e3e9ff; font-size: 15px; line-height: 1.5; }
+.introMeta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px; color: #e3e9ff; font-size: 13px; font-variant-numeric: tabular-nums; }
+.introMeta span { display: inline-flex; align-items: center; gap: 6px; }
+.courseLink { position: relative; z-index: 1; display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #ffffff80; border-radius: 9px; background: #ffffff14; color: #fff; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.courseLink:hover { background: #ffffff2e; }
+.courseLink:focus-visible, .viewToggle button:focus-visible, .chapterToggle:focus-visible, .nodeCard:focus-visible { outline: 3px solid #8e9dff; outline-offset: 3px; }
+.orbit { position: absolute; z-index: -1; top: -54px; right: 130px; width: 260px; height: 260px; border: 1px solid #dce6ff32; border-radius: 50%; transform: rotate(-25deg) scaleY(.45); }
+.orbit::before, .orbit::after, .orbit span { position: absolute; border-radius: 50%; content: ""; }
+.orbit::before { inset: 31px; border: 1px solid #dce6ff35; }
+.orbit::after { top: 15px; right: 22px; width: 26px; height: 26px; background: radial-gradient(circle at 32% 25%, #fff, #b7c4ff 25%, #6c70dd 55%, #343777 100%); box-shadow: 0 8px 16px #121a4670; }
+.orbit span:first-child { right: 45px; bottom: 52px; width: 13px; height: 13px; background: radial-gradient(circle at 30% 25%, #fff, #94ccf6 35%, #525fc7 100%); }
+.orbit span:last-child { top: 52px; left: 42px; width: 9px; height: 9px; background: #c6d6ff; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.toolbar p { margin: 0; color: #526078; font-size: 13px; line-height: 1.5; }
+.viewToggle { display: inline-flex; padding: 3px; border: 1px solid #d8e0ee; border-radius: 10px; background: #f0f3f9; }
+.viewToggle button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 0 13px; border: 0; border-radius: 7px; background: transparent; color: #526078; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.viewToggle button[aria-pressed="true"] { background: #fff; color: #293a76; box-shadow: 0 2px 6px #1c2a4817; }
+.chapters { display: grid; gap: 12px; }
+.chapter { min-width: 0; overflow: hidden; border: 1px solid #dce3f0; border-radius: 14px; background: #fff; }
+.chapter, .node { scroll-margin-top: 24px; }
+.chapterHeading { margin: 0; font-size: inherit; }
+.chapterToggle { display: flex; align-items: center; gap: 16px; width: 100%; min-height: 76px; padding: 16px 20px; border: 0; background: transparent; color: #24314d; font: inherit; text-align: left; cursor: pointer; }
+.chapterToggle:hover { background: #f7f9ff; }
+.chapterToggle > svg { flex: none; margin-left: auto; color: #68779b; transition: transform 180ms ease; }
+.chevronOpen { transform: rotate(180deg); }
+.chapterIndex { display: grid; flex: none; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: #eef1ff; color: #454aa5; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.chapterName { display: grid; gap: 3px; min-width: 0; font-size: 15px; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
+.chapterName span { color: #66748d; font-size: 12px; font-weight: 500; }
+.nodes { position: relative; display: grid; margin: 0; padding: 8px 24px 22px; list-style: none; background: linear-gradient(180deg, #f6f8ff, #fbfcff); }
+.node { position: relative; display: flex; justify-content: flex-start; min-width: 0; padding: 10px 0; }
+.node:nth-child(even) { justify-content: flex-end; }
+.thread { position: absolute; inset: 0 31%; pointer-events: none; }
+.thread svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.thread path { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.threadShadow { stroke: #5960a552; stroke-width: 12px; filter: drop-shadow(0 4px 4px #6674aa4d); }
+.threadColor { stroke-width: 8px; }
+.threadLight { stroke: #fff; stroke-opacity: .52; stroke-width: 1.5px; }
+.nodeDot { position: absolute; top: 50%; left: 50%; width: 15px; height: 15px; border: 3px solid #fff; border-radius: 50%; background: #7886df; box-shadow: 0 2px 7px #35458170; transform: translate(-50%, -50%); }
+.nodeDotDone { background: #168b71; }
+.nodeCard { position: relative; z-index: 1; display: grid; align-content: start; gap: 10px; width: 42%; min-height: 116px; padding: 15px 17px; border: 1px solid #d9e1f0; border-radius: 12px; background: #fff; color: #17233c; font: inherit; text-align: left; cursor: pointer; box-shadow: 0 5px 16px #3445720d; transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+.nodeCard:hover { transform: translateY(-2px); border-color: #9daaf0; box-shadow: 0 10px 22px #3545811c; }
+.nodeCard strong { font-size: 15px; line-height: 1.45; overflow-wrap: anywhere; }
+.nodeMeta, .nodeFoot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; font-size: 12px; line-height: 1.4; }
+.nodeMeta { color: #52628b; font-weight: 600; }
+.nodeMeta span:last-child { color: #657289; font-weight: 500; }
+.nodeMeta .done { color: #087a62 !important; }
+.nodeFoot { margin-top: auto; color: #62708a; }
+.nodeFoot span:last-child { display: inline-flex; align-items: center; gap: 4px; margin-left: auto; color: #454aa5; font-weight: 600; }
+.nextNode { border-color: #959af1; background: #fdfdff; }
+.nextPill { justify-self: start; padding: 3px 8px; border-radius: 999px; background: #e9edff; color: #363e93; font-size: 12px; font-weight: 600; }
+.checkpoint { border-color: #dfd3b9; background: #fffdf8; }
+.checkpoint .nodeMeta span:first-child { color: #805c20; }
+.flag { position: absolute; right: 16px; bottom: 16px; color: #967344; opacity: .35; }
+.noLessons, .empty p { margin: 0; padding: 16px 20px; color: #526078; font-size: 14px; }
+.empty { padding: 24px; border: 1px solid #dce3f0; border-radius: 14px; background: #fff; }
+.empty h2 { margin: 0; font-size: 20px; }
+.empty p { padding: 8px 0 0; }
+.journey[data-view="list"] .nodes { gap: 6px; padding: 10px 16px 16px; background: #fff; }
+.journey[data-view="list"] .node { padding: 0; }
+.journey[data-view="list"] .thread { display: none; }
+.journey[data-view="list"] .nodeCard { width: 100%; min-height: 0; box-shadow: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .orbit { animation: orbit-drift 12s ease-in-out infinite alternate; }
+  .orbit span:first-child { animation: moon-drift 7s ease-in-out infinite alternate; }
+  @keyframes orbit-drift { from { transform: rotate(-25deg) scaleY(.45) translateY(0); } to { transform: rotate(-21deg) scaleY(.45) translateY(10px); } }
+  @keyframes moon-drift { from { transform: translate(0, 0); } to { transform: translate(-8px, -6px); } }
+}
+@media (max-width: 700px) {
+  .intro { align-items: start; flex-direction: column; gap: 18px; min-height: 0; padding: 24px 20px; }
+  .introCopy h2 { font-size: 23px; }
+  .orbit { right: -45px; opacity: .65; }
+  .nodes { padding-right: 14px; padding-left: 14px; }
+  .node, .node:nth-child(even) { justify-content: flex-end; }
+  .thread { right: auto; left: 0; width: 64px; }
+  .nodeCard { width: calc(100% - 72px); }
+}
+@media (max-width: 420px) {
+  .introMeta { display: grid; gap: 6px; }
+  .chapterToggle { gap: 10px; padding: 14px; }
+  .chapterIndex { width: 36px; height: 36px; }
+  .chapterName { font-size: 14px; }
+  .viewToggle { width: 100%; }
+  .viewToggle button { flex: 1; }
+  .thread { width: 46px; }
+  .nodeCard { width: calc(100% - 52px); padding: 13px; }
+}

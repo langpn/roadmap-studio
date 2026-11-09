@@ -1,0 +1,11 @@
+[
+  { "slug": "baby-resolve", "file": "courses/baby-resolve/danh-muc.json" },
+  { "slug": "elite", "file": "courses/elite/danh-muc.json" },
+  { "slug": "freelance-mvp", "file": "courses/freelance-mvp/danh-muc.json" },
+  { "slug": "elite-pro", "file": "courses/elite-pro/danh-muc.json" },
+  { "slug": "speed-ramping", "file": "review/khoa-khac-20261106/speed-ramping.json", "supplemental": true },
+  { "slug": "upwork-mvp", "file": "review/khoa-khac-20261106/upwork-mvp.json", "supplemental": true },
+  { "slug": "capcut-a-z", "file": "review/khoa-khac-20261106/capcut-a-z.json", "supplemental": true },
+  { "slug": "fusion-101", "file": "review/khoa-khac-20261106/fusion-101.json", "supplemental": true },
+  { "slug": "keyframe-animation", "file": "review/khoa-khac-20261106/keyframe-animation.json", "supplemental": true }
+]

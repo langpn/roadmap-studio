@@ -1,0 +1,158 @@
+.banner {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 480px;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  background-color: #fff5f5;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(185, 28, 28, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05);
+  color: #7f1d1d;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: slideUp 200ms ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: #dc2626;
+  margin-top: 2px;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.message {
+  margin: 0;
+  font-weight: 600;
+  color: #991b1b;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #b91c1c;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.retryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.retryButton:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.retryButton:focus-visible {
+  outline: 2px solid #991b1b;
+  outline-offset: 2px;
+}
+
+.retryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dismissButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #991b1b;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.dismissButton:hover {
+  background-color: #fee2e2;
+}
+
+.dismissButton:focus-visible {
+  outline: 2px solid #991b1b;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .banner {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+    flex-direction: column;
+  }
+
+  .actions {
+    align-self: flex-end;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    animation: none;
+  }
+  .spin {
+    animation: none;
+  }
+}

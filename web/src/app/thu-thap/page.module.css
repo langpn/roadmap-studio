@@ -1,0 +1,262 @@
+.page {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-size: 15px;
+  line-height: 1.6;
+  padding-bottom: 56px;
+}
+
+.topBar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 20px;
+}
+
+.topBarInner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.backLink:hover {
+  color: #4f46e5;
+}
+
+.backLink:focus-visible {
+  outline: 3px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 2px 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #0f172a;
+}
+
+.lead {
+  margin: 0;
+  font-size: 15px;
+  color: #334155;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cardLead {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef2ff;
+  border: 1px solid #c7d2fe;
+  color: #4338ca;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.stepText {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.bookmarkletRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/*
+ * Nút này được chèn từ HTML nguồn (xem page.tsx) vì React 19 vô hiệu hoá href
+ * dạng javascript:. Vì vậy cần định kiểu bằng bộ chọn phần tử con.
+ */
+.bookmarkletHost {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bookmarkletHost :global(a) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #4338ca;
+  cursor: grab;
+  user-select: none;
+  touch-action: manipulation;
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+}
+
+.bookmarkletHost :global(a:hover) {
+  background-color: #4338ca;
+}
+
+.bookmarkletHost :global(a:active) {
+  cursor: grabbing;
+}
+
+.bookmarkletHost :global(a:focus-visible) {
+  outline: 3px solid #312e81;
+  outline-offset: 3px;
+}
+
+.smallNote {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.noteList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.noteItem {
+  position: relative;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  font-size: 14px;
+  color: #334155;
+}
+
+.noteWarning {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+  color: #78350f;
+}
+
+.footerNote {
+  margin: 0;
+  padding: 0 2px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.footerLink {
+  color: #4338ca;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.footerLink:focus-visible {
+  outline: 3px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .main {
+    padding: 24px 16px 0;
+  }
+
+  .card {
+    padding: 18px 16px 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}

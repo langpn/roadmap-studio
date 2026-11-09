@@ -1,0 +1,779 @@
+[
+  [
+    "5674",
+    "elite",
+    "5696",
+    "support",
+    "Tham khảo định hướng lộ trình học tập sau phần tổng quan."
+  ],
+  [
+    "1963",
+    "elite",
+    "1960",
+    "foundation",
+    "Xem lại danh sách nguồn RAW và cách tìm trước khi bắt tay thực hành."
+  ],
+  [
+    "1960",
+    "elite",
+    "1961",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "1961",
+    "elite",
+    "1962",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "1960",
+    "elite",
+    "3815",
+    "support",
+    "Tham khảo, đối chiếu nguồn tìm RAW thực hành với bộ tài nguyên chung."
+  ],
+  [
+    "1960",
+    "elite",
+    "5858",
+    "foundation",
+    "Tham khảo, đối chiếu nguồn tìm RAW với tiêu chí chọn đúng file RAW để luyện tập."
+  ],
+  [
+    "1968",
+    "elite",
+    "3814",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "1971",
+    "elite",
+    "1972",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "1968",
+    "elite",
+    "2129",
+    "foundation",
+    "Tham khảo, đối chiếu sử dụng Snap Caption với bản chất các loại Text, Subtitles."
+  ],
+  [
+    "2129",
+    "elite",
+    "2130",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "1967",
+    "elite",
+    "5857",
+    "foundation",
+    "Tham khảo, đối chiếu phần mở đầu Level 1 với tổng quan mức độ cơ bản trên thị trường."
+  ],
+  [
+    "5868",
+    "elite",
+    "5857",
+    "foundation",
+    "Tham khảo, đối chiếu kết quả kỳ vọng với tổng quan mức độ cơ bản trên thị trường."
+  ],
+  [
+    "5857",
+    "elite",
+    "5858",
+    "foundation",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5858",
+    "elite",
+    "5859",
+    "foundation",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5859",
+    "elite",
+    "5860",
+    "foundation",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5860",
+    "elite",
+    "5861",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5861",
+    "elite",
+    "5862",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5863",
+    "elite",
+    "5864",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5864",
+    "elite",
+    "5865",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5865",
+    "elite",
+    "5866",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5866",
+    "elite",
+    "5867",
+    "advanced",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2132",
+    "elite",
+    "2133",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2133",
+    "elite",
+    "2134",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2134",
+    "elite",
+    "2135",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2135",
+    "elite",
+    "2136",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2136",
+    "elite",
+    "2137",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2137",
+    "elite",
+    "2138",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2138",
+    "elite",
+    "2139",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2140",
+    "elite",
+    "2141",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2141",
+    "elite",
+    "2142",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2142",
+    "elite",
+    "2143",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2143",
+    "elite",
+    "2144",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2148",
+    "elite",
+    "2149",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2149",
+    "elite",
+    "2150",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2150",
+    "elite",
+    "2151",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2151",
+    "elite",
+    "2152",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2152",
+    "elite",
+    "2153",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2153",
+    "elite",
+    "2154",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2155",
+    "elite",
+    "2156",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2156",
+    "elite",
+    "2157",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2157",
+    "elite",
+    "2158",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2145",
+    "elite",
+    "2146",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2146",
+    "elite",
+    "2147",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4497",
+    "elite",
+    "4499",
+    "foundation",
+    "Tham khảo, đối chiếu kết quả kỳ vọng với bước cắt thô RAW và chạy Sub/Text."
+  ],
+  [
+    "4499",
+    "elite",
+    "4500",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4500",
+    "elite",
+    "4501",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4501",
+    "elite",
+    "4502",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4502",
+    "elite",
+    "4503",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4503",
+    "elite",
+    "4504",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4504",
+    "elite",
+    "4505",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4505",
+    "elite",
+    "4506",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4506",
+    "elite",
+    "4507",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "4507",
+    "elite",
+    "4508",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5922",
+    "elite",
+    "5923",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5923",
+    "elite",
+    "5924",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5924",
+    "elite",
+    "5941",
+    "advanced",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "5941",
+    "elite",
+    "5942",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2753",
+    "elite",
+    "2754",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2754",
+    "elite",
+    "2759",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2759",
+    "elite",
+    "2760",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2760",
+    "elite",
+    "2761",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2761",
+    "elite",
+    "2762",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2762",
+    "elite",
+    "2763",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2763",
+    "elite",
+    "2764",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2764",
+    "elite",
+    "2765",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2765",
+    "elite",
+    "2766",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2766",
+    "elite",
+    "2767",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2877",
+    "elite",
+    "2879",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2879",
+    "elite",
+    "2882",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2882",
+    "elite",
+    "2883",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2883",
+    "elite",
+    "2884",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2884",
+    "elite",
+    "2885",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2885",
+    "elite",
+    "2886",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2886",
+    "elite",
+    "2887",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2887",
+    "elite",
+    "2888",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2159",
+    "elite",
+    "2161",
+    "support",
+    "Tham khảo, đối chiếu hiệu ứng Text 3D với hiệu ứng ánh sáng trong 3D (Light 3D)."
+  ],
+  [
+    "2160",
+    "elite",
+    "2163",
+    "support",
+    "Tham khảo, đối chiếu hiệu ứng 3D Tracking với 3D Tracking Shadow tạo bóng cho vật thể 3D."
+  ],
+  [
+    "2161",
+    "elite",
+    "2162",
+    "support",
+    "Tham khảo, đối chiếu hiệu ứng Light 3D với hiệu ứng ánh sáng lướt qua (Light Weep)."
+  ],
+  [
+    "4504",
+    "elite",
+    "2159",
+    "foundation",
+    "Tham khảo, đối chiếu ý tưởng animation 3D với hiệu ứng Text 3D."
+  ],
+  [
+    "2159",
+    "elite",
+    "3165",
+    "support",
+    "Tham khảo, đối chiếu hiệu ứng Text 3D với Template Điện Thoại 3D."
+  ],
+  [
+    "2165",
+    "elite",
+    "2166",
+    "advanced",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương về hiệu ứng Line."
+  ],
+  [
+    "2169",
+    "elite",
+    "2170",
+    "support",
+    "Tham khảo phần liền kề trong cùng chuỗi/chương."
+  ],
+  [
+    "2167",
+    "elite",
+    "2168",
+    "support",
+    "Tham khảo, đối chiếu hiệu ứng sét cho chữ với hiệu ứng lửa cho chữ."
+  ],
+  [
+    "2129",
+    "elite",
+    "5862",
+    "foundation",
+    "Tham khảo, đối chiếu bản chất Text, Subtitles với phụ đề, căn chỉnh và ngắt câu."
+  ],
+  [
+    "5862",
+    "elite",
+    "4500",
+    "advanced",
+    "Tham khảo, đối chiếu phụ đề, căn chỉnh với lựa chọn và đồng bộ Style Text."
+  ],
+  [
+    "5863",
+    "elite",
+    "5704",
+    "support",
+    "Tham khảo, đối chiếu thiết kế Style, hiệu ứng chữ với nội dung xếp chữ trong video."
+  ],
+  [
+    "5704",
+    "elite",
+    "5922",
+    "support",
+    "Tham khảo, đối chiếu nội dung xếp chữ với sắp xếp chữ sử dụng B-roll điện ảnh."
+  ],
+  [
+    "5863",
+    "elite",
+    "2180",
+    "support",
+    "Tham khảo, đối chiếu thiết kế Style, hiệu ứng chữ với Animation Text đi lên theo thứ tự."
+  ],
+  [
+    "5863",
+    "elite",
+    "2186",
+    "support",
+    "Tham khảo, đối chiếu thiết kế Style, hiệu ứng chữ với Text Animation giao thoa màu."
+  ],
+  [
+    "5863",
+    "elite",
+    "2183",
+    "support",
+    "Tham khảo, đối chiếu thiết kế Style, hiệu ứng chữ với Animation Text cho video ngắn/dài."
+  ],
+  [
+    "2180",
+    "elite",
+    "2183",
+    "support",
+    "Tham khảo, đối chiếu Animation Text đi lên theo thứ tự với Animation Text cho video ngắn/dài."
+  ],
+  [
+    "2183",
+    "elite",
+    "3717",
+    "support",
+    "Tham khảo, đối chiếu Animation Text với Text Effect làm chữ viết tay."
+  ],
+  [
+    "2174",
+    "elite",
+    "2175",
+    "support",
+    "Tham khảo, đối chiếu cách cài đặt tài nguyên với cách cài Motion Graphics."
+  ],
+  [
+    "2174",
+    "elite",
+    "5709",
+    "support",
+    "Tham khảo, đối chiếu cách cài đặt tài nguyên với cách cài đặt template dạng Fuse."
+  ],
+  [
+    "5709",
+    "elite",
+    "5710",
+    "advanced",
+    "Tham khảo, đối chiếu template dạng Fuse với biến file template thành dạng Fusion."
+  ],
+  [
+    "2177",
+    "elite",
+    "2892",
+    "support",
+    "Tham khảo, đối chiếu cách lưu Plugin - Macros với cách xoá plugin đã cài đặt."
+  ],
+  [
+    "5438",
+    "elite",
+    "6016",
+    "support",
+    "Tham khảo, đối chiếu plugin EsplineV2 với plugin LMFx hỗ trợ làm animation."
+  ],
+  [
+    "5438",
+    "elite",
+    "5499",
+    "support",
+    "Tham khảo, đối chiếu plugin EsplineV2 làm animation với plugin ClipBoom tối ưu Copy & Paste."
+  ],
+  [
+    "3103",
+    "elite",
+    "3236",
+    "support",
+    "Tham khảo, đối chiếu tạo phím tắt bằng Keyboard Maestro với cài SFX bằng Touch Portal."
+  ],
+  [
+    "3130",
+    "elite",
+    "3718",
+    "support",
+    "Tham khảo, đối chiếu cách sử dụng Keyer với cách xoá nền trắng hoặc nền đen."
+  ],
+  [
+    "5860",
+    "elite",
+    "2140",
+    "support",
+    "Tham khảo, đối chiếu cắt RAW và lưu ý khi cắt với chọn RAW và cắt thô."
+  ],
+  [
+    "5860",
+    "elite",
+    "2155",
+    "support",
+    "Tham khảo, đối chiếu cắt RAW và lưu ý khi cắt với thao tác cắt thô."
+  ],
+  [
+    "5860",
+    "elite",
+    "4499",
+    "advanced",
+    "Tham khảo, đối chiếu cắt RAW và lưu ý khi cắt với bước cắt thô RAW và chạy Sub/Text."
+  ],
+  [
+    "4499",
+    "elite",
+    "2753",
+    "advanced",
+    "Tham khảo, đối chiếu bước cắt thô RAW với thực hiện cắt thô và ghi chú ý tưởng."
+  ],
+  [
+    "5861",
+    "elite",
+    "4508",
+    "advanced",
+    "Tham khảo, đối chiếu cân bằng âm thanh với bước chọn nhạc nền và chau chuốt lại Timeline."
+  ],
+  [
+    "4508",
+    "elite",
+    "2767",
+    "advanced",
+    "Tham khảo, đối chiếu chọn nhạc nền và chau chuốt Timeline với SFX, âm thanh và chau chuốt lại."
+  ],
+  [
+    "2146",
+    "elite",
+    "2133",
+    "foundation",
+    "Tham khảo, đối chiếu cách tìm ý tưởng Edit với phần tìm ý tưởng Edit trong bài thực hành."
+  ],
+  [
+    "2142",
+    "elite",
+    "2157",
+    "support",
+    "Tham khảo, đối chiếu chọn B-roll với tìm và thêm B-roll."
+  ],
+  [
+    "2156",
+    "elite",
+    "4506",
+    "advanced",
+    "Tham khảo, đối chiếu tư duy thêm B-roll với ý tưởng cho việc thêm B-roll."
+  ],
+  [
+    "4503",
+    "elite",
+    "2134",
+    "support",
+    "Tham khảo, đối chiếu tạo animation Hook với làm Hook Intro."
+  ],
+  [
+    "4507",
+    "elite",
+    "2151",
+    "support",
+    "Tham khảo, đối chiếu ý tưởng animation logo với làm animation cho logo."
+  ]
+]

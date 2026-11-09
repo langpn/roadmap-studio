@@ -1,0 +1,1493 @@
+[
+  [
+    "3511",
+    "baby-resolve",
+    "5671",
+    "foundation",
+    "Tham khảo thứ tự xem bài giảng nền tảng để đối chiếu với phần nhập môn."
+  ],
+  [
+    "5696",
+    "baby-resolve",
+    "5672",
+    "support",
+    "Tham khảo định hướng lộ trình làm video để đối chiếu với phần tư vấn lộ trình."
+  ],
+  [
+    "1960",
+    "baby-resolve",
+    "2189",
+    "foundation",
+    "Tham khảo danh mục nguồn tài nguyên dựng video để đối chiếu với phần tìm nguồn file thô."
+  ],
+  [
+    "3815",
+    "baby-resolve",
+    "2189",
+    "foundation",
+    "Tham khảo danh mục nguồn tài nguyên dựng video để đối chiếu với bộ tài nguyên chung."
+  ],
+  [
+    "1968",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần cài đặt phụ đề."
+  ],
+  [
+    "1968",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm plugin từ bên ngoài để đối chiếu với phần cài đặt phụ đề."
+  ],
+  [
+    "3814",
+    "baby-resolve",
+    "2222",
+    "support",
+    "Tham khảo danh mục lỗi thường gặp trong trang dựng để đối chiếu với sự cố phụ đề."
+  ],
+  [
+    "2129",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với bản chất các loại chữ và phụ đề."
+  ],
+  [
+    "2129",
+    "baby-resolve",
+    "2284",
+    "advanced",
+    "Tham khảo tính năng nhiều khối chữ và hộp chữ để đối chiếu với bản chất các loại chữ và phụ đề."
+  ],
+  [
+    "2130",
+    "baby-resolve",
+    "2222",
+    "support",
+    "Tham khảo danh mục lỗi thường gặp trong trang dựng để đối chiếu với các lỗi phổ biến."
+  ],
+  [
+    "5858",
+    "baby-resolve",
+    "2189",
+    "foundation",
+    "Tham khảo danh mục nguồn tài nguyên dựng video để đối chiếu với lý do chọn đúng file thô."
+  ],
+  [
+    "5859",
+    "baby-resolve",
+    "2193",
+    "foundation",
+    "Tham khảo cách tạo, lưu project trước khi chốt thông số timeline; bài này không nói FPS."
+  ],
+  [
+    "5861",
+    "baby-resolve",
+    "2254",
+    "foundation",
+    "Tham khảo giao diện trang âm thanh để đối chiếu với bố cục và cân bằng âm thanh."
+  ],
+  [
+    "5861",
+    "baby-resolve",
+    "2258",
+    "support",
+    "Tham khảo tính năng đồng đều hóa âm lượng để đối chiếu với phần cân bằng âm thanh."
+  ],
+  [
+    "5862",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần phụ đề và ngắt câu."
+  ],
+  [
+    "5862",
+    "baby-resolve",
+    "3230",
+    "advanced",
+    "Tham khảo công cụ phụ đề tiếng Việt để đối chiếu với phần phụ đề và ngắt câu."
+  ],
+  [
+    "5863",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với thiết kế kiểu chữ và hiệu ứng chữ."
+  ],
+  [
+    "5863",
+    "baby-resolve",
+    "2284",
+    "advanced",
+    "Tham khảo tính năng nhiều khối chữ và hộp chữ để đối chiếu với thiết kế kiểu chữ."
+  ],
+  [
+    "5865",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần sắp xếp chữ cơ bản."
+  ],
+  [
+    "5866",
+    "baby-resolve",
+    "2217",
+    "foundation",
+    "Tham khảo cách điều khiển chuyển động bằng khung khóa để đối chiếu với phần tạo chuyển động cho chữ."
+  ],
+  [
+    "5866",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần tạo chữ trước khi làm chuyển động."
+  ],
+  [
+    "2135",
+    "baby-resolve",
+    "2217",
+    "foundation",
+    "Tham khảo cách điều khiển chuyển động bằng khung khóa để đối chiếu với phần chuyển động cho hình ảnh."
+  ],
+  [
+    "2137",
+    "baby-resolve",
+    "2218",
+    "foundation",
+    "Tham khảo công cụ cắt xén để đối chiếu với hiệu ứng cắt đôi chữ."
+  ],
+  [
+    "2137",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với hiệu ứng cắt đôi chữ."
+  ],
+  [
+    "2139",
+    "baby-resolve",
+    "2254",
+    "foundation",
+    "Tham khảo giao diện trang âm thanh để đối chiếu với phần thêm âm thanh và nhạc nền."
+  ],
+  [
+    "2139",
+    "baby-resolve",
+    "2257",
+    "support",
+    "Tham khảo tính năng tự động giảm nhạc nền để đối chiếu với phần thêm âm thanh và nhạc nền."
+  ],
+  [
+    "2141",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần tạo chữ phụ đề."
+  ],
+  [
+    "2143",
+    "baby-resolve",
+    "2217",
+    "foundation",
+    "Tham khảo cách điều khiển chuyển động bằng khung khóa để đối chiếu với phần làm chữ chuyển động."
+  ],
+  [
+    "2143",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần chữ trước khi tạo chuyển động."
+  ],
+  [
+    "2144",
+    "baby-resolve",
+    "2271",
+    "foundation",
+    "Tham khảo kỹ thuật bám chuyển động cơ bản để đối chiếu với phần bám chuyển động cho chữ."
+  ],
+  [
+    "2144",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần định dạng chữ trước khi bám chuyển động."
+  ],
+  [
+    "2148",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với phần làm chuyển động biểu trưng mở đầu."
+  ],
+  [
+    "2149",
+    "baby-resolve",
+    "2217",
+    "foundation",
+    "Tham khảo cách điều khiển chuyển động bằng khung khóa để đối chiếu với phần làm chuyển động cho biểu tượng."
+  ],
+  [
+    "2151",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với phần làm chuyển động cho biểu trưng."
+  ],
+  [
+    "2152",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với hiệu ứng viền chữ."
+  ],
+  [
+    "2152",
+    "baby-resolve",
+    "2267",
+    "advanced",
+    "Tham khảo hiệu ứng chữ nổi ba chiều để đối chiếu với hiệu ứng viền chữ."
+  ],
+  [
+    "2154",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần thiết kế câu chữ mở đầu."
+  ],
+  [
+    "5704",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần xếp chữ trên khung hình."
+  ],
+  [
+    "4499",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với bước tạo chữ và phụ đề thô."
+  ],
+  [
+    "4500",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với việc lựa chọn và đồng bộ kiểu chữ."
+  ],
+  [
+    "4500",
+    "baby-resolve",
+    "5819",
+    "advanced",
+    "Tham khảo tính năng đổi kiểu chữ hàng loạt để đối chiếu với việc lựa chọn và đồng bộ kiểu chữ."
+  ],
+  [
+    "4501",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với các lưu ý khi hiển thị chữ."
+  ],
+  [
+    "4503",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với phần tạo chuyển động mở đầu."
+  ],
+  [
+    "4504",
+    "baby-resolve",
+    "2231",
+    "foundation",
+    "Tham khảo không gian ba chiều cơ bản để đối chiếu với ý tưởng chuyển động ba chiều."
+  ],
+  [
+    "4504",
+    "baby-resolve",
+    "2267",
+    "advanced",
+    "Tham khảo hiệu ứng chữ nổi ba chiều để đối chiếu với ý tưởng chuyển động ba chiều."
+  ],
+  [
+    "4507",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với ý tưởng chuyển động biểu trưng."
+  ],
+  [
+    "4508",
+    "baby-resolve",
+    "2254",
+    "foundation",
+    "Tham khảo giao diện trang âm thanh để đối chiếu với bước chọn nhạc nền và hoàn thiện dòng thời gian."
+  ],
+  [
+    "4508",
+    "baby-resolve",
+    "2257",
+    "support",
+    "Tham khảo tính năng tự động giảm nhạc nền để đối chiếu với bước chọn nhạc nền."
+  ],
+  [
+    "5922",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần sắp xếp chữ trên cảnh chèn."
+  ],
+  [
+    "5923",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần sắp xếp chữ trên video người nói."
+  ],
+  [
+    "5924",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với việc sử dụng mẫu chữ dựng sẵn."
+  ],
+  [
+    "5924",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm mẫu hiệu ứng từ bên ngoài để đối chiếu với việc ứng dụng mẫu chữ."
+  ],
+  [
+    "5941",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm plugin từ bên ngoài để đối chiếu với việc ứng dụng mẫu chữ và plugin chuyển động."
+  ],
+  [
+    "5941",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với việc ứng dụng mẫu chuyển động."
+  ],
+  [
+    "2767",
+    "baby-resolve",
+    "2254",
+    "foundation",
+    "Tham khảo giao diện trang âm thanh để đối chiếu với phần hoàn thiện âm thanh và tiếng động."
+  ],
+  [
+    "2767",
+    "baby-resolve",
+    "2255",
+    "support",
+    "Tham khảo tính năng thư viện âm thanh để đối chiếu với phần chau chuốt âm thanh và tiếng động."
+  ],
+  [
+    "2884",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần tạo chữ bám đuổi."
+  ],
+  [
+    "2887",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần chữ ở cuối video."
+  ],
+  [
+    "2887",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với phần chữ chuyển động ở cuối video."
+  ],
+  [
+    "2159",
+    "baby-resolve",
+    "2267",
+    "advanced",
+    "Tham khảo hiệu ứng chữ nổi ba chiều để đối chiếu với hiệu ứng chữ ba chiều."
+  ],
+  [
+    "2159",
+    "baby-resolve",
+    "2231",
+    "foundation",
+    "Tham khảo không gian ba chiều cơ bản để đối chiếu với hiệu ứng chữ ba chiều."
+  ],
+  [
+    "2160",
+    "baby-resolve",
+    "2232",
+    "advanced",
+    "Tham khảo camera ba chiều để đối chiếu với kỹ thuật bám chuyển động ba chiều."
+  ],
+  [
+    "2160",
+    "baby-resolve",
+    "2271",
+    "foundation",
+    "Tham khảo nguyên lý bám chuyển động cơ bản để đối chiếu với kỹ thuật bám chuyển động ba chiều."
+  ],
+  [
+    "2161",
+    "baby-resolve",
+    "2231",
+    "foundation",
+    "Tham khảo không gian ba chiều cơ bản để đối chiếu với nguồn ánh sáng trong không gian ba chiều."
+  ],
+  [
+    "2161",
+    "baby-resolve",
+    "2232",
+    "advanced",
+    "Tham khảo camera ba chiều để đối chiếu với góc nhìn ánh sáng trong không gian ba chiều."
+  ],
+  [
+    "2162",
+    "baby-resolve",
+    "2278",
+    "advanced",
+    "Tham khảo hiệu ứng ánh sáng quét qua vật thể để đối chiếu với hiệu ứng vệt sáng lướt qua."
+  ],
+  [
+    "2163",
+    "baby-resolve",
+    "2231",
+    "foundation",
+    "Tham khảo không gian ba chiều cơ bản để đối chiếu với hiệu ứng tạo bóng cho vật thể ba chiều."
+  ],
+  [
+    "2163",
+    "baby-resolve",
+    "2232",
+    "advanced",
+    "Tham khảo camera ba chiều để đối chiếu với việc cân chỉnh góc máy khi tạo bóng vật thể ba chiều."
+  ],
+  [
+    "2165",
+    "baby-resolve",
+    "2280",
+    "advanced",
+    "Tham khảo kỹ thuật vẽ đường nét cơ bản để đối chiếu với hiệu ứng đồ họa đường nét."
+  ],
+  [
+    "2165",
+    "baby-resolve",
+    "2281",
+    "support",
+    "Tham khảo plugin vẽ đường kẻ để đối chiếu với hiệu ứng đồ họa đường nét."
+  ],
+  [
+    "2166",
+    "baby-resolve",
+    "2280",
+    "advanced",
+    "Tham khảo kỹ thuật vẽ đường nét cơ bản để đối chiếu với hiệu ứng đường nét nâng cao."
+  ],
+  [
+    "2166",
+    "baby-resolve",
+    "2281",
+    "support",
+    "Tham khảo plugin vẽ đường kẻ để đối chiếu với hiệu ứng đường nét nâng cao."
+  ],
+  [
+    "2167",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần định dạng chữ trước khi gắn hiệu ứng sét."
+  ],
+  [
+    "2168",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần định dạng chữ trước khi gắn hiệu ứng lửa."
+  ],
+  [
+    "2174",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm hiệu ứng và plugin từ bên ngoài để đối chiếu với cách cài đặt tài nguyên."
+  ],
+  [
+    "2174",
+    "baby-resolve",
+    "2253",
+    "support",
+    "Tham khảo cách thêm LUT từ bên ngoài để đối chiếu với cách cài đặt tài nguyên."
+  ],
+  [
+    "2175",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm hiệu ứng từ bên ngoài để đối chiếu với cách cài đặt gói đồ họa chuyển động."
+  ],
+  [
+    "5709",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm mẫu hiệu ứng từ bên ngoài để đối chiếu với cách cài đặt gói mẫu đồ họa."
+  ],
+  [
+    "5710",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm mẫu hiệu ứng từ bên ngoài để đối chiếu với mẹo chuyển đổi định dạng mẫu."
+  ],
+  [
+    "2892",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo vị trí thêm plugin từ bên ngoài để đối chiếu với cách xóa plugin đã cài."
+  ],
+  [
+    "2179",
+    "baby-resolve",
+    "2190",
+    "foundation",
+    "Tham khảo phương pháp sắp xếp dữ liệu để đối chiếu với việc sử dụng thiết bị lưu trữ ngoài."
+  ],
+  [
+    "2179",
+    "baby-resolve",
+    "2194",
+    "foundation",
+    "Tham khảo tính năng tự động lưu và dự phòng dự án để đối chiếu với việc sử dụng thiết bị lưu trữ ngoài."
+  ],
+  [
+    "2180",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần chữ trước khi tạo chuyển động theo thứ tự."
+  ],
+  [
+    "2180",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với hiệu ứng chữ xuất hiện theo thứ tự."
+  ],
+  [
+    "2181",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm plugin từ bên ngoài để đối chiếu với phần chia sẻ tính năng của plugin chuyển động."
+  ],
+  [
+    "2182",
+    "baby-resolve",
+    "2235",
+    "foundation",
+    "Tham khảo giao diện trang chỉnh màu để đối chiếu với phần chia sẻ chỉnh màu cơ bản."
+  ],
+  [
+    "2182",
+    "baby-resolve",
+    "2237",
+    "foundation",
+    "Tham khảo công cụ điều chỉnh màu cơ bản để đối chiếu với phần chia sẻ chỉnh màu cơ bản."
+  ],
+  [
+    "2182",
+    "baby-resolve",
+    "2236",
+    "foundation",
+    "Tham khảo quy trình làm việc với node màu để đối chiếu với phần chia sẻ chỉnh màu cơ bản."
+  ],
+  [
+    "2711",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm mẫu tài nguyên từ bên ngoài để đối chiếu với gói biểu tượng động."
+  ],
+  [
+    "2711",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với gói biểu tượng động."
+  ],
+  [
+    "2186",
+    "baby-resolve",
+    "2276",
+    "advanced",
+    "Tham khảo hiệu ứng chữ nhiều màu để đối chiếu với hiệu ứng chữ đổi màu."
+  ],
+  [
+    "2186",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần chữ trước khi tạo hiệu ứng màu."
+  ],
+  [
+    "3103",
+    "baby-resolve",
+    "2191",
+    "foundation",
+    "Tham khảo sơ lược về phím tắt để đối chiếu với cách gán phím tắt thao tác."
+  ],
+  [
+    "3103",
+    "baby-resolve",
+    "2192",
+    "support",
+    "Tham khảo chi tiết phím tắt thường dùng để đối chiếu với cách gán phím tắt tiện lợi."
+  ],
+  [
+    "3130",
+    "baby-resolve",
+    "2239",
+    "advanced",
+    "Tham khảo công cụ mặt nạ tách vùng chỉnh màu để đối chiếu với cách sử dụng công cụ tách màu sạch hơn."
+  ],
+  [
+    "3130",
+    "baby-resolve",
+    "2244",
+    "advanced",
+    "Tham khảo node trộn khóa màu để đối chiếu với cách sử dụng công cụ tách màu sạch hơn."
+  ],
+  [
+    "3165",
+    "baby-resolve",
+    "2231",
+    "foundation",
+    "Tham khảo không gian ba chiều cơ bản để đối chiếu với mẫu điện thoại ba chiều."
+  ],
+  [
+    "3165",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm mẫu tài nguyên từ bên ngoài để đối chiếu với mẫu điện thoại ba chiều."
+  ],
+  [
+    "3174",
+    "baby-resolve",
+    "2189",
+    "foundation",
+    "Tham khảo danh mục nguồn tài nguyên dựng video để đối chiếu với phương pháp tải video tư liệu."
+  ],
+  [
+    "3234",
+    "baby-resolve",
+    "2222",
+    "support",
+    "Tham khảo danh mục lỗi thường gặp trong trang dựng để đối chiếu với hiện tượng mất hiển thị hình ảnh."
+  ],
+  [
+    "3236",
+    "baby-resolve",
+    "2255",
+    "support",
+    "Tham khảo tính năng thư viện âm thanh để đối chiếu với cách cài đặt âm thanh hiệu ứng."
+  ],
+  [
+    "2183",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với các kiểu chữ thông dụng cho video."
+  ],
+  [
+    "2183",
+    "baby-resolve",
+    "2270",
+    "advanced",
+    "Tham khảo mẫu chuyển động biểu trưng và chữ để đối chiếu với các kiểu chữ chuyển động thông dụng."
+  ],
+  [
+    "3717",
+    "baby-resolve",
+    "2280",
+    "advanced",
+    "Tham khảo kỹ thuật vẽ đường nét cơ bản để đối chiếu với hiệu ứng chữ viết tay."
+  ],
+  [
+    "3717",
+    "baby-resolve",
+    "2220",
+    "foundation",
+    "Tham khảo công cụ chữ cơ bản để đối chiếu với phần tạo chữ trước khi làm hiệu ứng viết tay."
+  ],
+  [
+    "3718",
+    "baby-resolve",
+    "2216",
+    "support",
+    "Tham khảo chế độ hòa trộn để đối chiếu với mẹo xóa phông nền trắng hoặc đen."
+  ],
+  [
+    "4903",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm mẫu hiệu ứng từ bên ngoài để đối chiếu với mẫu khung hình học."
+  ],
+  [
+    "5438",
+    "baby-resolve",
+    "2229",
+    "foundation",
+    "Tham khảo chủ đề khung khóa trong Fusion để đối chiếu với công cụ hỗ trợ chuyển động."
+  ],
+  [
+    "5438",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm plugin từ bên ngoài để đối chiếu với công cụ hỗ trợ chuyển động."
+  ],
+  [
+    "6016",
+    "baby-resolve",
+    "2265",
+    "support",
+    "Tham khảo cách thêm plugin từ bên ngoài để đối chiếu với bộ công cụ hỗ trợ chuyển động."
+  ],
+  [
+    "6016",
+    "baby-resolve",
+    "2217",
+    "foundation",
+    "Tham khảo cách điều khiển chuyển động bằng khung khóa để đối chiếu với công cụ hỗ trợ chuyển động."
+  ],
+  [
+    "5696",
+    "freelance-mvp",
+    "2314",
+    "support",
+    "Tham khảo phân loại các công việc thực tế để đối chiếu với phần tư vấn lộ trình."
+  ],
+  [
+    "5696",
+    "upwork-mvp",
+    "2121",
+    "support",
+    "Tham khảo định hướng phát triển bền vững để đối chiếu với phần tư vấn lộ trình."
+  ],
+  [
+    "1968",
+    "capcut-a-z",
+    "3635",
+    "support",
+    "Đối chiếu cách công cụ khác chạy phụ đề song ngữ; không phải hướng dẫn cài Snap Caption."
+  ],
+  [
+    "3814",
+    "capcut-a-z",
+    "3605",
+    "support",
+    "Tham khảo các lỗi timing trong CapCut; liên hệ theo chủ đề lỗi thường gặp, chưa xác minh nội dung video Snap Caption."
+  ],
+  [
+    "1969",
+    "freelance-mvp",
+    "2318",
+    "support",
+    "Tham khảo tác phong làm việc thực tế để đối chiếu với bài thực hành dự án cho khách hàng."
+  ],
+  [
+    "1969",
+    "freelance-mvp",
+    "2319",
+    "support",
+    "Tham khảo kỹ năng giao tiếp hiệu quả để đối chiếu với bài thực hành dự án cho khách hàng."
+  ],
+  [
+    "1971",
+    "freelance-mvp",
+    "2319",
+    "support",
+    "Tham khảo kỹ năng giao tiếp hiệu quả để đối chiếu với phần làm việc thực tế với khách hàng."
+  ],
+  [
+    "1971",
+    "upwork-mvp",
+    "2117",
+    "support",
+    "Tham khảo cách nhắn tin giao tiếp chuyên nghiệp với khách hàng để đối chiếu với phần làm việc thực tế với khách hàng."
+  ],
+  [
+    "2129",
+    "capcut-a-z",
+    "3583",
+    "support",
+    "Tham khảo chủ đề chữ trong CapCut để đối chiếu với bản chất các loại chữ và phụ đề."
+  ],
+  [
+    "2130",
+    "capcut-a-z",
+    "3605",
+    "support",
+    "Tham khảo lỗi timing trong CapCut; bài Elite có phần chữ về chính tả và căn chỉnh."
+  ],
+  [
+    "2130",
+    "capcut-a-z",
+    "3634",
+    "support",
+    "Tham khảo lỗi thường gặp trong CapCut; bài Elite có phần chữ về chính tả và căn chỉnh."
+  ],
+  [
+    "5857",
+    "freelance-mvp",
+    "2314",
+    "support",
+    "Tham khảo phân loại các công việc để đối chiếu với tổng quan mức độ cơ bản trên thị trường."
+  ],
+  [
+    "5857",
+    "upwork-mvp",
+    "1883",
+    "support",
+    "Tham khảo tổng quan về ngành tự do để đối chiếu với tổng quan mức độ cơ bản trên thị trường."
+  ],
+  [
+    "5859",
+    "capcut-a-z",
+    "3602",
+    "support",
+    "Cùng chủ đề thông số đầu vào; bài CapCut nói tỷ lệ khung hình, không nói FPS."
+  ],
+  [
+    "5860",
+    "speed-ramping",
+    "4046",
+    "support",
+    "Tham khảo quy trình cắt thô file thô để đối chiếu với lưu ý khi cắt source."
+  ],
+  [
+    "5861",
+    "speed-ramping",
+    "4074",
+    "advanced",
+    "Tham khảo chủ đề thiết kế âm thanh và tiếng động để đối chiếu với bố cục và cân bằng âm thanh."
+  ],
+  [
+    "5862",
+    "capcut-a-z",
+    "3583",
+    "support",
+    "Tham khảo chủ đề chữ trong CapCut để đối chiếu với phần phụ đề."
+  ],
+  [
+    "5862",
+    "capcut-a-z",
+    "3635",
+    "support",
+    "Đối chiếu cách công cụ khác chạy phụ đề song ngữ; không phải hướng dẫn của DaVinci."
+  ],
+  [
+    "5863",
+    "keyframe-animation",
+    "3021",
+    "support",
+    "Tham khảo cách tạo chuyển động trong Edit Page để đối chiếu với thiết kế hiệu ứng chữ."
+  ],
+  [
+    "5863",
+    "capcut-a-z",
+    "3637",
+    "support",
+    "Tham khảo mẹo tạo bóng đổ cho chữ để đối chiếu với thiết kế kiểu chữ và hiệu ứng chữ."
+  ],
+  [
+    "5866",
+    "keyframe-animation",
+    "3018",
+    "support",
+    "Tham khảo nguyên lý chuyển động Ease để đối chiếu với phần tạo chuyển động cho chữ."
+  ],
+  [
+    "2132",
+    "speed-ramping",
+    "4061",
+    "support",
+    "Tham khảo bước cắt lọc thô file thô để đối chiếu với phần chọn source và cắt thô."
+  ],
+  [
+    "2132",
+    "speed-ramping",
+    "4062",
+    "support",
+    "Tham khảo bước cắt file thô người nói để đối chiếu với phần chọn source và cắt thô."
+  ],
+  [
+    "2134",
+    "speed-ramping",
+    "4701",
+    "advanced",
+    "Tham khảo mẫu đoạn mở đầu thay đổi tốc độ để đối chiếu với phần dựng đoạn mở đầu video."
+  ],
+  [
+    "2135",
+    "keyframe-animation",
+    "3015",
+    "support",
+    "Tham khảo khung khóa vị trí để đối chiếu với phần tạo chuyển động cho hình ảnh minh họa."
+  ],
+  [
+    "2136",
+    "keyframe-animation",
+    "3016",
+    "advanced",
+    "Tham khảo cách điều khiển nhiều thông số cùng lúc để đối chiếu với phần tạo chuyển động hình ảnh."
+  ],
+  [
+    "2137",
+    "keyframe-animation",
+    "3017",
+    "support",
+    "Tham khảo công cụ Transform Overlays để đối chiếu với hiệu ứng cắt đôi chữ."
+  ],
+  [
+    "2137",
+    "fusion-101",
+    "2930",
+    "advanced",
+    "Tham khảo thao tác cắt media trong Fusion để đối chiếu với hiệu ứng cắt chữ."
+  ],
+  [
+    "2138",
+    "keyframe-animation",
+    "3020",
+    "support",
+    "Tham khảo nguyên tắc khi nào nên áp dụng Ease để đối chiếu với phần tạo chuyển động cho hình ảnh."
+  ],
+  [
+    "2139",
+    "speed-ramping",
+    "4074",
+    "support",
+    "Tham khảo chủ đề thiết kế âm thanh và tiếng động để đối chiếu với phần thêm âm thanh và nhạc nền."
+  ],
+  [
+    "2139",
+    "speed-ramping",
+    "4703",
+    "advanced",
+    "Tham khảo cách cân lại nhịp nhạc để đối chiếu với phần thêm âm thanh và nhạc nền."
+  ],
+  [
+    "2140",
+    "speed-ramping",
+    "4063",
+    "support",
+    "Tham khảo cách chọn lọc file thô và sắp xếp vị trí để đối chiếu với phần chọn source và cắt thô."
+  ],
+  [
+    "2142",
+    "capcut-a-z",
+    "3596",
+    "support",
+    "Tham khảo phong cách cảnh chèn điện ảnh để đối chiếu với bước chọn cảnh chèn bổ trợ."
+  ],
+  [
+    "2143",
+    "keyframe-animation",
+    "3021",
+    "support",
+    "Tham khảo cách tạo chuyển động trong Edit Page để đối chiếu với phần làm chữ chuyển động."
+  ],
+  [
+    "2148",
+    "keyframe-animation",
+    "3037",
+    "advanced",
+    "Tham khảo chuyển động biểu trưng trong Fusion để đối chiếu với phần làm chuyển động biểu trưng mở đầu."
+  ],
+  [
+    "2148",
+    "speed-ramping",
+    "4554",
+    "advanced",
+    "Tham khảo chuyển động mặt nạ biểu trưng để đối chiếu với phần làm chuyển động biểu trưng mở đầu."
+  ],
+  [
+    "2149",
+    "keyframe-animation",
+    "3022",
+    "support",
+    "Tham khảo mẫu chuyển động vẫy tay trong Edit Page để đối chiếu với phần làm chuyển động cho biểu tượng."
+  ],
+  [
+    "2150",
+    "keyframe-animation",
+    "3018",
+    "support",
+    "Tham khảo nguyên lý chuyển động Ease để đối chiếu với phần làm chuyển động cho biểu tượng."
+  ],
+  [
+    "2151",
+    "keyframe-animation",
+    "3039",
+    "advanced",
+    "Tham khảo cách chỉnh Ease cho chuyển động biểu trưng để đối chiếu với phần làm chuyển động biểu trưng."
+  ],
+  [
+    "2155",
+    "speed-ramping",
+    "4062",
+    "support",
+    "Tham khảo bước cắt file thô người nói để đối chiếu với phần cắt thô video."
+  ],
+  [
+    "5704",
+    "keyframe-animation",
+    "3021",
+    "support",
+    "Tham khảo cách tạo chuyển động trong Edit Page để đối chiếu với phần sắp xếp chữ."
+  ],
+  [
+    "5704",
+    "capcut-a-z",
+    "3583",
+    "support",
+    "Tham khảo chủ đề chữ trong CapCut để đối chiếu với phần sắp xếp chữ."
+  ],
+  [
+    "2145",
+    "freelance-mvp",
+    "2314",
+    "support",
+    "Tham khảo phân loại các công việc để đối chiếu với phần đánh giá các cấp độ kỹ năng."
+  ],
+  [
+    "2145",
+    "upwork-mvp",
+    "1950",
+    "support",
+    "Tham khảo phương pháp chọn ngành nghề để đối chiếu với phần đánh giá các cấp độ kỹ năng."
+  ],
+  [
+    "2147",
+    "freelance-mvp",
+    "2317",
+    "advanced",
+    "Tham khảo phương pháp tính giá công việc để đối chiếu với cách tính giá video."
+  ],
+  [
+    "2147",
+    "upwork-mvp",
+    "2107",
+    "support",
+    "Tham khảo các loại hợp đồng công việc để đối chiếu với cách tính giá video."
+  ],
+  [
+    "4499",
+    "speed-ramping",
+    "4046",
+    "support",
+    "Tham khảo quy trình cắt thô file thô để đối chiếu với bước cắt thô và chạy chữ."
+  ],
+  [
+    "4500",
+    "capcut-a-z",
+    "3583",
+    "support",
+    "Tham khảo chủ đề chữ trong CapCut để đối chiếu với việc lựa chọn và đồng bộ kiểu chữ."
+  ],
+  [
+    "4503",
+    "keyframe-animation",
+    "3018",
+    "support",
+    "Tham khảo nguyên lý chuyển động Ease để đối chiếu với phần tạo chuyển động cho đoạn mở đầu."
+  ],
+  [
+    "4503",
+    "speed-ramping",
+    "4548",
+    "advanced",
+    "Tham khảo chuyển động thay đổi tốc độ ở đoạn đầu để đối chiếu với phần tạo chuyển động mở đầu."
+  ],
+  [
+    "4504",
+    "keyframe-animation",
+    "3026",
+    "support",
+    "Tham khảo môi trường làm việc trong Fusion để đối chiếu với ý tưởng tạo chuyển động ba chiều."
+  ],
+  [
+    "4507",
+    "keyframe-animation",
+    "3037",
+    "advanced",
+    "Tham khảo chuyển động biểu trưng trong Fusion để đối chiếu với ý tưởng chuyển động biểu trưng."
+  ],
+  [
+    "4507",
+    "speed-ramping",
+    "4554",
+    "advanced",
+    "Tham khảo chuyển động mặt nạ biểu trưng để đối chiếu với ý tưởng chuyển động biểu trưng."
+  ],
+  [
+    "4508",
+    "speed-ramping",
+    "4703",
+    "advanced",
+    "Tham khảo cách cân lại nhịp nhạc để đối chiếu với bước chọn nhạc nền và hoàn thiện dòng thời gian."
+  ],
+  [
+    "5922",
+    "capcut-a-z",
+    "3596",
+    "support",
+    "Tham khảo phong cách cảnh chèn điện ảnh để đối chiếu với phần sắp xếp chữ cùng cảnh chèn."
+  ],
+  [
+    "5922",
+    "keyframe-animation",
+    "3021",
+    "support",
+    "Tham khảo cách tạo chuyển động trong Edit Page để đối chiếu với phần sắp xếp chữ cùng cảnh chèn."
+  ],
+  [
+    "5923",
+    "speed-ramping",
+    "4064",
+    "support",
+    "Tham khảo cách bố trí chữ trên video người nói để đối chiếu với phần sắp xếp chữ."
+  ],
+  [
+    "5941",
+    "keyframe-animation",
+    "3011",
+    "support",
+    "Tham khảo cách khung khóa hoạt động để đối chiếu với việc ứng dụng mẫu chữ và plugin chuyển động."
+  ],
+  [
+    "2877",
+    "keyframe-animation",
+    "3028",
+    "advanced",
+    "Tham khảo cách điều chỉnh khung khóa trong Fusion để đối chiếu với phần làm chuyển động liên kết hình tròn."
+  ],
+  [
+    "2879",
+    "keyframe-animation",
+    "3029",
+    "advanced",
+    "Tham khảo chủ đề Spline trong Fusion để tìm hiểu thêm về chuyển động."
+  ],
+  [
+    "2885",
+    "keyframe-animation",
+    "3015",
+    "support",
+    "Tham khảo khung khóa vị trí để đối chiếu với phần tạo chuyển động cho biểu đồ."
+  ],
+  [
+    "2886",
+    "keyframe-animation",
+    "3018",
+    "support",
+    "Tham khảo nguyên lý chuyển động Ease để đối chiếu với phần hoàn thành chuyển động biểu đồ."
+  ],
+  [
+    "2887",
+    "keyframe-animation",
+    "3021",
+    "support",
+    "Tham khảo cách tạo chuyển động trong Edit Page để đối chiếu với phần chữ chuyển động ở cuối video."
+  ],
+  [
+    "2159",
+    "keyframe-animation",
+    "3028",
+    "advanced",
+    "Tham khảo cách điều chỉnh khung khóa trong Fusion để đối chiếu với hiệu ứng chữ ba chiều."
+  ],
+  [
+    "2162",
+    "keyframe-animation",
+    "3015",
+    "support",
+    "Tham khảo khung khóa vị trí để đối chiếu với hiệu ứng ánh sáng lướt qua."
+  ],
+  [
+    "2165",
+    "keyframe-animation",
+    "3011",
+    "support",
+    "Tham khảo cách khung khóa hoạt động để đối chiếu với hiệu ứng đồ họa đường nét."
+  ],
+  [
+    "2166",
+    "keyframe-animation",
+    "3029",
+    "advanced",
+    "Tham khảo chủ đề Spline trong Fusion để đối chiếu với hiệu ứng đường nét nâng cao."
+  ],
+  [
+    "2169",
+    "keyframe-animation",
+    "3018",
+    "support",
+    "Tham khảo nguyên lý chuyển động Ease để đối chiếu với bài thực hành hiệu ứng đồ họa."
+  ],
+  [
+    "2170",
+    "keyframe-animation",
+    "3016",
+    "advanced",
+    "Tham khảo cách điều khiển nhiều thông số cùng lúc để đối chiếu với bài thực hành hiệu ứng đồ họa."
+  ],
+  [
+    "2171",
+    "fusion-101",
+    "2924",
+    "support",
+    "Tham khảo chủ đề phân loại các dạng node trong Fusion để tìm hiểu thêm về node Fastnoise."
+  ],
+  [
+    "2180",
+    "keyframe-animation",
+    "3015",
+    "support",
+    "Tham khảo khung khóa vị trí để đối chiếu với hiệu ứng chữ xuất hiện theo thứ tự."
+  ],
+  [
+    "2180",
+    "keyframe-animation",
+    "3018",
+    "support",
+    "Tham khảo nguyên lý chuyển động Ease để đối chiếu với hiệu ứng chữ xuất hiện theo thứ tự."
+  ],
+  [
+    "2182",
+    "speed-ramping",
+    "4075",
+    "support",
+    "Tham khảo bước chỉnh màu để đối chiếu với phần chia sẻ chỉnh màu cơ bản."
+  ],
+  [
+    "2182",
+    "capcut-a-z",
+    "3631",
+    "support",
+    "Tham khảo công cụ chỉnh màu cơ bản để đối chiếu với phần chia sẻ chỉnh màu cơ bản."
+  ],
+  [
+    "2182",
+    "speed-ramping",
+    "4660",
+    "advanced",
+    "Tham khảo phần chỉnh màu nâng cao để đối chiếu với phần chia sẻ chỉnh màu cơ bản."
+  ],
+  [
+    "2710",
+    "keyframe-animation",
+    "3015",
+    "support",
+    "Tham khảo khung khóa vị trí để đối chiếu với hiệu ứng biểu tượng pin sạc."
+  ],
+  [
+    "2183",
+    "keyframe-animation",
+    "3021",
+    "support",
+    "Tham khảo cách tạo chuyển động trong Edit Page để đối chiếu với các kiểu chữ chuyển động thông dụng."
+  ],
+  [
+    "2183",
+    "capcut-a-z",
+    "3585",
+    "support",
+    "Tham khảo chuyển động khung khóa để đối chiếu với các kiểu chữ chuyển động thông dụng."
+  ],
+  [
+    "3717",
+    "keyframe-animation",
+    "3018",
+    "support",
+    "Tham khảo nguyên lý chuyển động Ease để đối chiếu với hiệu ứng chữ viết tay."
+  ],
+  [
+    "4903",
+    "keyframe-animation",
+    "3017",
+    "support",
+    "Tham khảo công cụ Transform Overlays để đối chiếu với mẫu khung hình học."
+  ],
+  [
+    "5438",
+    "keyframe-animation",
+    "3029",
+    "advanced",
+    "Tham khảo chủ đề Spline trong Fusion để đối chiếu với công cụ hỗ trợ chuyển động."
+  ],
+  [
+    "5438",
+    "fusion-101",
+    "2931",
+    "support",
+    "Tham khảo chủ đề Ease và kiểm soát chuyển động keyframe trong Fusion để đối chiếu với công cụ hỗ trợ chuyển động."
+  ],
+  [
+    "6016",
+    "keyframe-animation",
+    "3028",
+    "advanced",
+    "Tham khảo cách điều chỉnh khung khóa trong Fusion để đối chiếu với công cụ hỗ trợ chuyển động."
+  ],
+  [
+    "1968",
+    "elite-pro",
+    "5097",
+    "advanced",
+    "Tham khảo mẫu caption động để đối chiếu với phần cài đặt phụ đề."
+  ],
+  [
+    "2129",
+    "elite-pro",
+    "3719",
+    "advanced",
+    "Tham khảo mẫu chữ tùy biến để đối chiếu với bản chất các loại chữ và phụ đề."
+  ],
+  [
+    "2129",
+    "elite-pro",
+    "3723",
+    "advanced",
+    "Tham khảo mẫu chữ chuyển động để đối chiếu với bản chất các loại chữ và phụ đề."
+  ],
+  [
+    "5862",
+    "elite-pro",
+    "5097",
+    "advanced",
+    "Tham khảo mẫu caption động để đối chiếu với phần căn chỉnh phụ đề."
+  ],
+  [
+    "5863",
+    "elite-pro",
+    "3723",
+    "advanced",
+    "Tham khảo mẫu chữ chuyển động để đối chiếu với thiết kế kiểu chữ và hiệu ứng chữ."
+  ],
+  [
+    "5863",
+    "elite-pro",
+    "3296",
+    "advanced",
+    "Tham khảo bộ mẫu chữ chuyển động để đối chiếu với thiết kế kiểu chữ và hiệu ứng chữ."
+  ],
+  [
+    "5866",
+    "elite-pro",
+    "3723",
+    "advanced",
+    "Tham khảo mẫu chữ chuyển động để đối chiếu với phần tạo chuyển động cho chữ."
+  ],
+  [
+    "2143",
+    "elite-pro",
+    "3723",
+    "advanced",
+    "Tham khảo mẫu chữ chuyển động để đối chiếu với phần tạo chuyển động chữ trong bài thực hành."
+  ],
+  [
+    "2149",
+    "elite-pro",
+    "4056",
+    "advanced",
+    "Tham khảo mẫu biểu tượng chuyển động để đối chiếu với phần tạo chuyển động cho biểu tượng."
+  ],
+  [
+    "4500",
+    "elite-pro",
+    "3719",
+    "advanced",
+    "Tham khảo mẫu chữ tùy biến để đối chiếu với việc lựa chọn kiểu chữ."
+  ],
+  [
+    "5924",
+    "elite-pro",
+    "5097",
+    "advanced",
+    "Tham khảo mẫu caption động để đối chiếu với mẫu chữ dựng sẵn."
+  ],
+  [
+    "2887",
+    "elite-pro",
+    "3723",
+    "advanced",
+    "Tham khảo mẫu chữ chuyển động để đối chiếu với phần chữ chuyển động ở cuối video."
+  ],
+  [
+    "2175",
+    "elite-pro",
+    "5099",
+    "advanced",
+    "Tham khảo gói đồ họa chuyển động để đối chiếu với cách cài đặt gói đồ họa."
+  ],
+  [
+    "5709",
+    "elite-pro",
+    "5099",
+    "advanced",
+    "Tham khảo gói đồ họa chuyển động để đối chiếu với việc cài đặt gói mẫu đồ họa."
+  ],
+  [
+    "2180",
+    "elite-pro",
+    "3723",
+    "advanced",
+    "Tham khảo mẫu chữ chuyển động để đối chiếu với hiệu ứng chữ xuất hiện theo thứ tự."
+  ],
+  [
+    "2182",
+    "elite-pro",
+    "3846",
+    "advanced",
+    "Tham khảo chủ đề chỉnh màu Log để đối chiếu với phần chia sẻ chỉnh màu cơ bản."
+  ],
+  [
+    "2711",
+    "elite-pro",
+    "4056",
+    "advanced",
+    "Tham khảo mẫu biểu tượng chuyển động để đối chiếu với gói biểu tượng động."
+  ],
+  [
+    "2186",
+    "elite-pro",
+    "3723",
+    "advanced",
+    "Tham khảo mẫu chữ chuyển động để đối chiếu với hiệu ứng chữ đổi màu."
+  ],
+  [
+    "2183",
+    "elite-pro",
+    "3296",
+    "advanced",
+    "Tham khảo bộ mẫu chữ chuyển động để đối chiếu với các kiểu chữ chuyển động thông dụng."
+  ]
+]

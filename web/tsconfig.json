@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-e2e/types/**/*.ts",
+    ".next-e2e/dev/types/**/*.ts",
+    ".next-check/types/**/*.ts",
+    ".next-check/dev/types/**/*.ts",
+    ".next-secure-check/types/**/*.ts",
+    ".next-secure-check/dev/types/**/*.ts",
+    ".next-secure-final/types/**/*.ts",
+    ".next-secure-final/dev/types/**/*.ts",
+    ".next-release/types/**/*.ts",
+    ".next-release/dev/types/**/*.ts",
+    ".next-roadmap-dev/types/**/*.ts",
+    ".next-roadmap-dev/dev/types/**/*.ts",
+    ".next-roadmap-private-test/types/**/*.ts",
+    ".next-roadmap-private-test/dev/types/**/*.ts",
+    ".next-roadmap-release/types/**/*.ts",
+    ".next-roadmap-release/dev/types/**/*.ts",
+    ".next-roadmap-personal/types/**/*.ts",
+    ".next-roadmap-personal/dev/types/**/*.ts",
+    ".next-media-controls/types/**/*.ts",
+    ".next-media-controls/dev/types/**/*.ts",
+    ".next-demo-audit/types/**/*.ts",
+    ".next-demo-audit/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

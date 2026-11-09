@@ -1,0 +1,550 @@
+.roadmapWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.topControlRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.headingArea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.headingTitleRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.roadmapHeading {
+  margin: 0;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.roadmapSubheading {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.demoBadgeSmall {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.viewToggleGroup {
+  display: flex;
+  max-width: 100%;
+  padding: 3px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #f1f5f9;
+}
+
+.viewToggleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #475569;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.viewToggleButton:hover {
+  color: #0f172a;
+}
+
+.viewToggleActive {
+  background: #ffffff;
+  color: #1e1b4b;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.viewToggleButton:focus-visible,
+.stageToggle:focus-visible,
+.stepButton:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.stageSequence {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+}
+
+.diagramView {
+  position: relative;
+  padding-left: 28px;
+}
+
+.diagramView::before {
+  position: absolute;
+  top: 26px;
+  bottom: 24px;
+  left: 9px;
+  width: 2px;
+  background: #c7d2fe;
+  content: "";
+}
+
+.stageSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.diagramView .stageSection::before {
+  position: absolute;
+  top: 25px;
+  left: -23px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #4f46e5;
+  border-radius: 50%;
+  background: #ffffff;
+  content: "";
+}
+
+.stageHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid #e0e7ff;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.stageNumberBadge {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stageHeaderInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.stageTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.stageTitle {
+  min-width: 0;
+  margin: 0;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.stageTimeframe {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stageToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 6px 9px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #4338ca;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stageToggle:hover {
+  border-color: #818cf8;
+  background: #f5f7ff;
+}
+
+.stageChevronOpen {
+  transform: rotate(180deg);
+}
+
+.stageDescription,
+.emptyStage {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.stageProgress {
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stepItem {
+  min-width: 0;
+}
+
+.stepButton {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.stepButton:hover {
+  border-color: #93b4f4;
+  background: #f8fbff;
+}
+
+.recommendedStep {
+  border-color: #93c5fd;
+  background: #f5f9ff;
+}
+
+.stepHeading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  min-width: 0;
+}
+
+.stepSequence,
+.stepKind,
+.firstStep,
+.recommendedLabel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.stepSequence {
+  color: #4338ca;
+  font-variant-numeric: tabular-nums;
+}
+
+.stepKind {
+  color: #475569;
+}
+
+.firstStep,
+.recommendedLabel {
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.statusCompleted,
+.statusInProgress,
+.statusNotUpdated {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.statusCompleted {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.statusInProgress {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.statusNotUpdated {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.stepTitle {
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.stepTarget {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.stepFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.stepDuration {
+  color: #52627a;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.openStep {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* A connected path keeps the reading order without requiring a zoomable canvas. */
+.diagramView .stepList {
+  position: relative;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.diagramView .stepList::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #a5b4fc;
+  content: "";
+}
+
+.diagramView .stepItem {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-right: 54%;
+}
+
+.diagramView .stepItem:nth-child(even) {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 54%;
+}
+
+.diagramView .stepItem::before {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  width: 4%;
+  height: 2px;
+  background: #a5b4fc;
+  content: "";
+}
+
+.diagramView .stepItem:nth-child(even)::before {
+  left: 50%;
+}
+
+.diagramView .stepButton {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  min-height: 72px;
+  gap: 5px;
+  padding: 10px 12px;
+  border-color: #aebce5;
+  box-shadow: 0 2px 5px rgba(30, 41, 59, 0.04);
+}
+
+.diagramView .milestoneStep {
+  border-width: 2px;
+  border-color: #818cf8;
+  background: #f8f8ff;
+}
+
+.diagramView .recommendedStep {
+  border-color: #4f46e5;
+  background: #eef2ff;
+}
+
+.diagramView .stepHeading {
+  gap: 4px 7px;
+}
+
+.diagramView .stepTitle {
+  font-size: 13px;
+}
+
+.diagramView .firstStep,
+.diagramView .stepTarget,
+.diagramView .stepFooter {
+  display: none;
+}
+
+.listView .stepList {
+  gap: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.listView .stepButton {
+  border: 0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0;
+}
+
+.listView .stepItem:first-child .stepButton {
+  border-radius: 7px 7px 0 0;
+}
+
+.listView .stepItem:last-child .stepButton {
+  border-bottom: 0;
+  border-radius: 0 0 7px 7px;
+}
+
+.listView .stepItem:only-child .stepButton {
+  border-radius: 7px;
+}
+
+.emptyStage {
+  padding: 8px 4px;
+}
+
+@media (max-width: 768px) {
+  .diagramView {
+    padding-left: 0;
+  }
+
+  .diagramView::before,
+  .diagramView .stageSection::before {
+    display: none;
+  }
+
+  .stageHeader {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .diagramView .stepList::before {
+    left: 10px;
+  }
+
+  .diagramView .stepItem,
+  .diagramView .stepItem:nth-child(even) {
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .diagramView .stepItem::before,
+  .diagramView .stepItem:nth-child(even)::before {
+    left: 10px;
+    width: 20px;
+  }
+
+  .diagramView .stepButton {
+    width: calc(100% - 30px);
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .viewToggleGroup {
+    width: 100%;
+  }
+
+  .viewToggleButton {
+    flex: 1;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .stepButton {
+    padding: 13px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stepButton {
+    transition: none;
+  }
+}

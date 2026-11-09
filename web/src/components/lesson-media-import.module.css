@@ -1,0 +1,225 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.fieldDragging {
+  border-color: #4f46e5;
+  background-color: #eef2ff;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 12px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.textarea::placeholder {
+  color: #94a3b8;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+}
+
+.textarea:focus-visible {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+}
+
+.textarea:disabled {
+  background-color: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.help {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.primaryButton {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: 1px solid #4338ca;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background-color: #4338ca;
+}
+
+.primaryButton:focus-visible {
+  outline: 3px solid #312e81;
+  outline-offset: 2px;
+}
+
+.secondaryButton {
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.secondaryButton:focus-visible {
+  outline: 3px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.statusRegion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statusRegion:empty {
+  display: none;
+}
+
+.statusText {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.successBox {
+  padding: 12px 14px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  color: #166534;
+}
+
+.successTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.successDetail {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #15803d;
+}
+
+.errorBox {
+  padding: 12px 14px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #991b1b;
+}
+
+.errorTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.errorDetail {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.errorList {
+  margin: 6px 0 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.errorLink {
+  color: #991b1b;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.errorLink:focus-visible {
+  outline: 3px solid #991b1b;
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}
