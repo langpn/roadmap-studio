@@ -19,6 +19,11 @@
 !/web/pnpm-workspace.yaml
 !/web/tsconfig.json
 !/web/vitest.config.ts
+!/web/docs/
+/web/docs/*
+!/web/docs/huong-dan-dang-nhap.md
+!/web/docs/thu-dien-tu.md
+!/web/docs/van-hanh-local.md
 !/web/public/
 /web/public/*
 !/web/public/demo/
