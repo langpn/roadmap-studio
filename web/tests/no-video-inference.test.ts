@@ -33,8 +33,7 @@ describe("không suy nội dung video từ tiêu đề", () => {
       onSelectRelatedLesson: () => {},
     }));
     const text = strip(html);
-    expect(text).toContain("nội dung video chưa được xác minh");
-    expect(text).toContain("Đây là bài mẫu, chưa có mô tả đối chiếu.");
+    expect(text).toContain("Chưa có mô tả đã đối chiếu phần chữ trên trang.");
     expect(text).not.toMatch(videoClaims);
     expect(text).not.toMatch(/chưa xem nội dung video.*chưa xem nội dung video/i);
   });
@@ -56,7 +55,7 @@ describe("không suy nội dung video từ tiêu đề", () => {
       relatedLessons: [],
     }));
     const text = strip(html);
-    expect(text).toContain("Mô tả chỉ tóm tắt phần chữ của trang bài học, không phải nội dung video.");
+    expect(text).toContain("Thông tin lấy từ phần chữ trên trang bài học, không phải nội dung video.");
     expect(text).toContain("Định dạng và thời lượng lấy theo danh mục; chưa xem nội dung video.");
     expect(text).not.toMatch(videoClaims);
   });

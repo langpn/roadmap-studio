@@ -106,15 +106,12 @@ test("lời mời, tiến độ thực hành độc lập và thử lại khi l�
     owner.waitForResponse((response) => isProgressResponse(response, "lesson", "5860", 200)),
     ownerDetail.getByRole("button", { name: "Đang học" }).click(),
   ]);
-  await Promise.all([
-    owner.waitForResponse((response) => isProgressResponse(response, "opened", "2207", 200)),
-    ownerDetail.getByRole("button", { name: targetTitle, exact: true }).click(),
-  ]);
-  ownerDetail = owner.getByRole("dialog");
-  await expect(ownerDetail.getByRole("heading", { name: targetTitle })).toBeVisible();
-  await expect(ownerDetail.getByRole("button", { name: anchorTitle, exact: true })).toBeVisible();
-  await ownerDetail.getByRole("button", { name: `Quay lại: ${anchorTitle}` }).click();
-  ownerDetail = owner.getByRole("dialog");
+  const [anchorStudy] = await Promise.all([owner.waitForEvent("popup"), ownerDetail.getByRole("link", { name: "Mở trang học" }).click()]);
+  const [targetStudy] = await Promise.all([anchorStudy.waitForEvent("popup"), anchorStudy.getByRole("region", { name: "Bài học liên kết" }).locator('a[href^="/bai-hoc/2207"]').click()]);
+  await expect(targetStudy.getByRole("heading", { name: targetTitle })).toBeVisible();
+  await expect(targetStudy.getByRole("link", { name: new RegExp(anchorTitle) }).first()).toBeVisible();
+  await targetStudy.close();
+  await anchorStudy.close();
   await expect(ownerDetail.getByRole("button", { name: "Đang học" })).toHaveAttribute("aria-pressed", "true");
   await ownerDetail.getByRole("button", { name: "Đóng bảng chi tiết bài học" }).click();
   await expect(ownerBrief).toBeVisible();
@@ -129,13 +126,12 @@ test("lời mời, tiến độ thực hành độc lập và thử lại khi l�
     owner.getByRole("region", { name: "Kết quả tìm kiếm bài học" }).getByText(trackingTitle, { exact: true }).click(),
   ]);
   ownerDetail = owner.getByRole("dialog");
-  await Promise.all([
-    owner.waitForResponse((response) => isProgressResponse(response, "opened", "3304", 200)),
-    ownerDetail.getByRole("button", { name: proTrackingTitle, exact: true }).click(),
-  ]);
-  ownerDetail = owner.getByRole("dialog");
-  await expect(ownerDetail.getByRole("heading", { name: proTrackingTitle })).toBeVisible();
-  await expect(ownerDetail.getByRole("button", { name: trackingTitle, exact: true })).toBeVisible();
+  const [trackingStudy] = await Promise.all([owner.waitForEvent("popup"), ownerDetail.getByRole("link", { name: "Mở trang học" }).click()]);
+  const [proStudy] = await Promise.all([trackingStudy.waitForEvent("popup"), trackingStudy.getByRole("region", { name: "Bài học liên kết" }).locator('a[href^="/bai-hoc/3304"]').click()]);
+  await expect(proStudy.getByRole("heading", { name: proTrackingTitle })).toBeVisible();
+  await expect(proStudy.locator('a[href^="/bai-hoc/2160"]').first()).toBeVisible();
+  await proStudy.close();
+  await trackingStudy.close();
   await ownerDetail.getByRole("button", { name: "Đóng bảng chi tiết bài học" }).click();
   await owner.getByRole("button", { name: "Xóa tìm kiếm" }).click();
 

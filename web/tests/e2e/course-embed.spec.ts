@@ -26,20 +26,19 @@ test("mở đúng bài trên website gốc trong cửa sổ học bên cạnh th
   await expect(detail.getByRole("button", { name: "Chọn video trên máy" })).toHaveCount(0);
   await expect(detail.getByLabel("Đường dẫn MP4, WebM hoặc HLS")).toHaveCount(0);
   await expect(detail.locator("iframe")).toHaveCount(0);
-  const popupPromise = page.waitForEvent("popup");
-  await detail.getByRole("button", { name: "Xem bài học trên website gốc" }).click();
-  const popup = await popupPromise;
+  const [study] = await Promise.all([page.waitForEvent("popup"), detail.getByRole("link", { name: "Mở trang học" }).click()]);
+  const [popup] = await Promise.all([study.waitForEvent("popup"), study.getByRole("link", { name: "Mở bài học trên website gốc" }).click()]);
   await expect(popup).toHaveURL(lessonUrl);
   expect(await popup.evaluate(() => window.opener)).toBeNull();
   await popup.getByRole("button", { name: "Phát giả lập" }).click();
   await expect(popup.getByRole("button", { name: "Đang phát giả lập" })).toBeVisible();
   expect((await (await page.request.get(`${origin}/api/progress`)).json()).lessons["90000"]).toBe("not_updated");
-  await expect(detail.getByRole("link", { name: "Mở trong thẻ mới" })).toHaveAttribute("href", lessonUrl);
+  await expect(study.getByRole("link", { name: "Mở bài học trên website gốc" })).toHaveAttribute("href", lessonUrl);
   await popup.close();
   await detail.getByRole("button", { name: "Đóng bảng chi tiết bài học" }).click();
 });
 
-test("khi trình duyệt chặn cửa sổ mới vẫn có liên kết gốc và bố cục dùng được ở 320px", async ({ page, baseURL }) => {
+test("trang học có liên kết gốc và bố cục dùng được ở 320px", async ({ page, baseURL }) => {
   expect(baseURL).toBe(origin);
   await page.setViewportSize({ width: 320, height: 844 });
   await page.route("**/*", async (route) => {
@@ -52,15 +51,13 @@ test("khi trình duyệt chặn cửa sổ mới vẫn có liên kết gốc và
   });
   expect(response.status()).toBe(200);
   await page.goto("/");
-  await page.evaluate(() => { window.open = () => null; });
   await page.getByLabel("Tìm kiếm bài học toàn hệ thống").fill("Sắp xếp tư liệu");
   await page.getByRole("region", { name: "Kết quả tìm kiếm bài học" }).getByText("Sắp xếp tư liệu", { exact: true }).click();
   const detail = page.getByRole("dialog");
-  await detail.getByRole("button", { name: "Xem bài học trên website gốc" }).click();
-  await expect(detail.getByRole("alert")).toContainText(/Trình duyệt đã chặn cửa sổ mới/);
-  await expect(detail.getByRole("link", { name: "Mở trong thẻ mới" })).toHaveAttribute("href", lessonUrl);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
-  await detail.getByRole("button", { name: "Bài tiếp theo: Tạo project" }).click();
-  await expect(detail.getByRole("heading", { name: "Tạo project" })).toBeVisible();
-  await expect(detail.locator("iframe")).toHaveCount(0);
+  const [study] = await Promise.all([page.waitForEvent("popup"), detail.getByRole("link", { name: "Mở trang học" }).click()]);
+  await study.setViewportSize({ width: 320, height: 844 });
+  await expect(study.getByRole("link", { name: "Mở bài học trên website gốc" })).toHaveAttribute("href", lessonUrl);
+  expect(await study.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  await study.getByRole("link", { name: /Bài tiếp/ }).click();
+  await expect(study.getByRole("heading", { name: "Tạo project" })).toBeVisible();
 });

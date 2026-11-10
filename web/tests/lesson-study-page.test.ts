@@ -6,6 +6,9 @@ import { courseNeighbours, findLessonStudyContext } from "@/app/bai-hoc/[lessonI
 import { demoCatalog } from "@/lib/catalog/demo";
 import { demoRoadmap } from "@/lib/catalog/demo-roadmap";
 import { getRelatedLessons } from "@/lib/catalog/lesson-links";
+import { privateRoadmap } from "@/components/roadmap-data";
+import { loadCatalog } from "@/lib/catalog/source";
+import { hasPrivateCatalog } from "./private-catalog";
 
 const course = demoCatalog.courses[0];
 const chapter = course.chapters[0];
@@ -155,5 +158,37 @@ describe("trang học bài", () => {
     expect(html).toContain("Nền tảng");
     expect(html).toContain(`href="/bai-hoc/${linkedRelated[0].lesson.id}"`);
     expect(html).toContain(linkedRelated[0].reason);
+    expect(html).toContain(linkedRelated[0].basisLabel);
+  });
+
+  it.skipIf(!hasPrivateCatalog)("ghi mức bằng chứng phần chữ cho gợi ý liên khóa", async () => {
+    const catalog = await loadCatalog();
+    const connections = privateRoadmap.lessonConnections ?? [];
+    const context = findLessonStudyContext(catalog, "2113");
+    expect(context).not.toBeNull();
+    const linked = getRelatedLessons(catalog, connections, "upwork-mvp", "2113");
+    const cross = linked.find((item) => item.lesson.courseSlug === "freelance-mvp");
+    expect(cross?.basis).toBe("page_text");
+
+    const html = renderToStaticMarkup(createElement(LessonStudyView, {
+      mode: "private" as const,
+      homeHref: "/",
+      lesson: context!.lesson,
+      course: context!.course,
+      chapter: context!.chapter,
+      position: 1,
+      total: context!.course.lessonCount,
+      previousLesson: null,
+      nextLesson: null,
+      initialState: "not_updated" as const,
+      initialVersion: null,
+      media: null,
+      relatedLessons: linked,
+    }));
+
+    expect(html).toContain("Đối chiếu phần chữ hai trang; chưa xem nội dung video");
+    expect(html).toContain(cross!.reason);
+    expect(html).toContain(cross!.evidence!.slice(0, 40));
+    expect(html).not.toContain("Đã xem toàn bộ video");
   });
 });

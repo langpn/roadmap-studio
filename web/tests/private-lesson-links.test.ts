@@ -78,12 +78,13 @@ describe("mạng bài học cá nhân lấy Elite làm trục", () => {
       chapter.lessons.map((lesson) => [String(`${course.slug}:${lesson.id}`), lesson] as const),
     )));
     const pairs = new Set<string>();
+    // Trục Elite là 372 cạnh cũ; quan hệ liên khóa được kiểm riêng trong lesson-links.test.ts.
+    const eliteBased = connections.filter((link) => link.from.courseSlug === "elite");
 
-    expect(connections.length).toBeGreaterThan(0);
+    expect(eliteBased).toHaveLength(372);
     for (const link of connections) {
       const from = `${link.from.courseSlug}:${link.from.lessonId}`;
       const to = `${link.to.courseSlug}:${link.to.lessonId}`;
-      expect(link.from.courseSlug).toBe("elite");
       expect(lessons.get(from)).toBeDefined();
       expect(lessons.get(to)).toBeDefined();
       expect(lessons.get(from)?.titleWithheld).toBe(false);
@@ -92,8 +93,10 @@ describe("mạng bài học cá nhân lấy Elite làm trục", () => {
       expect(pairs.has(`${from}>${to}`)).toBe(false);
       expect(pairs.has(`${to}>${from}`)).toBe(false);
       expect(link.reason.trim().length).toBeGreaterThan(10);
-      expect(link.basis).toBe("title");
       pairs.add(`${from}>${to}`);
+    }
+    for (const link of eliteBased) {
+      expect(link.basis).toBe("title");
     }
   });
 

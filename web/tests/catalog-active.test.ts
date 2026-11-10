@@ -1,5 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { demoCatalog } from "@/lib/catalog/demo";
+import { mkdtemp, mkdir, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
 
 const dependencies = vi.hoisted(() => ({
   getDatabase: vi.fn(),
@@ -22,6 +25,36 @@ describe("danh mục cá nhân đã nhập", () => {
     dependencies.getDatabase.mockResolvedValue({});
   });
   afterEach(() => vi.unstubAllEnvs());
+
+  it("hiển thị chữ trang Elite đã lưu cho bài cùng URL mà không sửa ảnh chụp", async () => {
+    const root = await mkdtemp(path.join(tmpdir(), "roadmap-description-"));
+    await mkdir(path.join(root, "courses/elite"), { recursive: true });
+    const saved = structuredClone(demoCatalog);
+    const course = saved.courses[0];
+    course.slug = "elite";
+    const chapter = course.chapters[0];
+    const lesson = chapter.lessons[0];
+    lesson.courseSlug = "elite";
+    lesson.url = "https://seankangmvp.com/courses/davinci-elite/chapters/42/lessons/3511";
+    lesson.id = "3511";
+    lesson.summary = null;
+    const other = chapter.lessons[1];
+    other.url = "https://seankangmvp.com/courses/davinci-elite/chapters/42/lessons/3512";
+    other.summary = null;
+    const original = structuredClone(saved);
+    await writeFile(path.join(root, "courses/elite/noi-dung.json"), JSON.stringify({ chapters: [{ lessons: [
+      { url: lesson.url, captured: true, content_status: "read", hydration: "content-present", text: "Nội dung trang đã lưu." },
+      { url: other.url, captured: true, content_status: "empty-after-hydration-wait", hydration: "empty-after-wait", text: "Không được hiển thị." },
+    ] }] }));
+    vi.stubEnv("CATALOG_SOURCE_ROOT", root);
+    dependencies.readImportedCatalog.mockResolvedValue(saved);
+
+    const active = await getActiveCatalog();
+    expect(active.courses[0].chapters[0].lessons[0].summary).toBe("Nội dung trang đã lưu.");
+    expect(active.courses[0].chapters[0].lessons[1].summary).toBeNull();
+    expect(saved).toEqual(original);
+    expect(dependencies.importCatalog).not.toHaveBeenCalled();
+  });
 
   it("bản sao mới chưa có danh mục riêng vẫn mở được với danh mục trống", async () => {
     vi.stubEnv("CATALOG_MANIFEST", "");

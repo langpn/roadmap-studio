@@ -68,7 +68,8 @@ async function openLesson(page: Page, sdkAvailable: boolean, volumeSupported = t
   await page.goto("/");
   await page.getByLabel("Tìm kiếm bài học toàn hệ thống").fill("Sắp xếp tư liệu");
   await page.getByRole("region", { name: "Kết quả tìm kiếm bài học" }).getByText("Sắp xếp tư liệu", { exact: true }).click();
-  await page.getByRole("dialog").getByRole("link", { name: "Mở trang học" }).click();
+  const href = await page.getByRole("dialog").getByRole("link", { name: "Mở trang học" }).getAttribute("href");
+  await page.goto(href!);
   return page;
 }
 

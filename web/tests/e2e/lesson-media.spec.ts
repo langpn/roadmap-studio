@@ -70,7 +70,8 @@ test("nhập tệp liên kết rồi phát video trên trang học riêng", asyn
   const detail = page.getByRole("dialog");
   await expect(detail.getByRole("heading", { name: "Sắp xếp tư liệu" })).toBeVisible();
   await expect(detail.locator("iframe")).toHaveCount(0);
-  await detail.getByRole("link", { name: "Mở trang học" }).click();
+  const href = await detail.getByRole("link", { name: "Mở trang học" }).getAttribute("href");
+  await page.goto(href!);
   await expect(page).toHaveURL(new RegExp(`/bai-hoc/${lessonId}$`));
   const frame = page.locator("iframe");
   await expect(frame).toHaveAttribute("src", `${embedUrl}?autoplay=false`);

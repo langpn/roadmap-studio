@@ -24,20 +24,23 @@ test("trang học mở thực hành kèm lối về bài và Esc đóng được
   await expect(page.getByRole("dialog")).toHaveCount(0);
 });
 
-test("bảng chi tiết bài mở thực hành rồi quay lại đúng bài", async ({ page }) => {
+test("bảng chi tiết mở trang học trong tab mới và giữ lộ trình", async ({ page }) => {
   await page.goto("/demo");
   await page.getByRole("button", { name: /^Làm quen dựng phim/ }).click();
   await page.getByRole("button", { name: /Cắt và sắp xếp/ }).click();
 
   const drawer = page.getByRole("dialog");
-  await expect(drawer.getByRole("heading", { name: "Bài thực hành dùng bài này" })).toBeVisible();
-  await drawer.getByRole("button", { name: practiceLink }).click();
-
-  const practice = page.getByRole("dialog");
-  await expect(practice).toContainText("Cắt một đoạn nói rõ ý");
-  await practice.getByRole("button", { name: "Quay lại bài học" }).click();
-
-  await expect(page.getByRole("dialog").getByRole("heading", { level: 2 }).first()).toHaveText("Cắt và sắp xếp");
+  await expect(drawer.getByRole("heading", { name: "Bài học liên kết" })).toBeVisible();
+  await expect(drawer.getByRole("link", { name: /Chọn cảnh/ })).toHaveAttribute("target", "_blank");
+  await expect(drawer).toContainText("chưa mục nào xác minh nội dung video");
+  await expect(drawer).toContainText("Gợi ý theo tiêu đề; chưa xác minh nội dung video");
+  const [study] = await Promise.all([
+    page.waitForEvent("popup"),
+    drawer.getByRole("link", { name: "Mở trang học" }).click(),
+  ]);
+  await expect(study).toHaveURL(/\/bai-hoc\/90003\?demo=1/);
+  await expect(study.getByRole("region", heading).first()).toContainText("Cắt một đoạn nói rõ ý");
+  await expect(drawer.getByRole("heading", { level: 2 }).first()).toHaveText("Cắt và sắp xếp");
 });
 
 test("bàn phím mở được thực hành từ trang học", async ({ page }) => {

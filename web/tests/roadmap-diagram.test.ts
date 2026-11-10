@@ -1,3 +1,5 @@
+import { demoCatalog } from "@/lib/catalog/demo";
+import { demoRoadmap } from "@/lib/catalog/demo-roadmap";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
@@ -155,46 +157,17 @@ describe("sơ đồ lộ trình thực hành", () => {
     expect(html).not.toContain("Tạo portfolio mẫu");
   });
 
-  it("hiển thị các bước theo chặng với tiến độ, gợi ý và đầu ra từ dữ liệu", () => {
-    const html = renderToStaticMarkup(createElement(RoadmapDiagram, props));
-    const buttons = [...html.matchAll(/<button\b[^>]*>[\s\S]*?<\/button>/g)].map(([button]) => button);
-    const text = html.replace(/<[^>]*>/g, " ");
-    const cut = buttons.find((button) => button.includes("Cắt đoạn video đầu tiên"));
-    const clip = buttons.find((button) => button.includes("Xuất clip đầu tiên"));
-    const portfolio = buttons.find((button) => button.includes("Tạo portfolio mẫu"));
-    const proposal = buttons.find((button) => button.includes("Viết đề xuất mẫu"));
-
-    expect(cut).toContain("Đã hoàn thành");
-    expect(cut).toContain("Bài tập đầu tiên");
-    expect(cut).not.toContain("Gợi ý tiếp theo");
-    expect(clip).toContain("Đang thực hiện");
-    expect(clip).toContain("Gợi ý tiếp theo");
-    expect(clip).toContain("Cột mốc");
-    expect(portfolio).toContain("Chưa thực hiện");
-    expect(portfolio).toContain("Một trang giới thiệu các clip mẫu.");
-    expect(portfolio).toContain("Cột mốc");
-    expect(proposal).toContain("Viết đề xuất cho một brief giả lập.");
-    expect(text).toMatch(/1\s*\/\s*2\s*bước hoàn thành/);
-    expect(text).toMatch(/0\s*\/\s*2\s*bước hoàn thành/);
-    expect(html).not.toContain("Chặng 1: Chặng 1:");
-    expect(html.indexOf("Cắt đoạn video đầu tiên")).toBeLessThan(html.indexOf("Xuất clip đầu tiên"));
-    expect(html.indexOf("Xuất clip đầu tiên")).toBeLessThan(html.indexOf("Tạo portfolio mẫu"));
-    expect(html.indexOf("Tạo portfolio mẫu")).toBeLessThan(html.indexOf("Viết đề xuất mẫu"));
-    expect(html).toMatch(/<ol\b[^>]*start="1"/);
-    expect(html).toMatch(/<ol\b[^>]*start="3"/);
-    expect(html).not.toContain("missing-step");
-    expect(html).not.toContain("Bài chưa được xếp vào lộ trình");
-    expect(html).not.toContain("Khóa học giả để thử");
+  it("hiển thị liên tục các chương của lộ trình mẫu", () => {
+    const html = renderToStaticMarkup(createElement(RoadmapDiagram, { ...props, catalog: demoCatalog, roadmap: demoRoadmap }));
+    expect(html).toContain("Lộ trình mẫu");
+    expect(html).toContain("Sắp xếp tư liệu");
+    expect(html).toContain("Xuất bản thử");
+    expect(html.indexOf("Sắp xếp tư liệu")).toBeLessThan(html.indexOf("Xuất bản thử"));
+    expect(html).not.toContain("aria-expanded");
   });
 
-  it("giữ chặng rỗng an toàn khi tất cả mã bài đều không tồn tại", () => {
-    const emptyRoadmap = { ...roadmap, stages: [{ ...stages[0], practiceIds: ["missing-step"] }] };
-    const html = renderToStaticMarkup(createElement(RoadmapDiagram, { ...props, roadmap: emptyRoadmap }));
-    const text = html.replace(/<[^>]*>/g, " ");
-
-    expect(text).toContain("Làm quen với dựng video");
-    expect(text).toMatch(/0\s*\/\s*0\s*bước hoàn thành/);
-    expect(html).not.toContain("missing-step");
-    expect(html).not.toContain("Cắt đoạn video đầu tiên");
+  it("hiển thị trạng thái rỗng khi chưa có giáo trình", () => {
+    const html = renderToStaticMarkup(createElement(RoadmapDiagram, props));
+    expect(html).toContain("Chưa có giáo trình Elite");
   });
 });

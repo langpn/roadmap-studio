@@ -255,6 +255,11 @@
   border-top: 1px solid #e2e8f0;
 }
 
+.copyContext { min-height: 44px; padding: 9px 14px; border: 1px solid #c7d2fe; border-radius: 6px; background: #eef2ff; color: #3730a3; font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
+.copyContext:hover { background: #e0e7ff; }
+.copyContext:focus-visible, .contextText:focus-visible { outline: 3px solid #4858d4; outline-offset: 2px; }
+.contextText { width: 100%; min-height: 180px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font: inherit; }
+
 .blockHeader {
   display: flex;
   align-items: center;

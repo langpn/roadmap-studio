@@ -10,7 +10,7 @@ test("bài trong khóa làm trục chưa có gợi ý vẫn báo trạng thái r
   await page.goto("/demo");
   await page.getByRole("button", { name: "Mở việc cần làm" }).click();
   await page.getByRole("dialog").getByRole("button", { name: /Bài mẫu: Sắp xếp tư liệu/ }).click();
-  await expect(page.getByRole("dialog").getByText("Chưa có bài liên kết gợi ý cho bài này.")).toBeVisible();
+  await expect(page.getByRole("dialog").getByText("Chưa có bài liên kết gợi ý.")).toBeVisible();
 });
 
 test("đi tới bài liên kết, quay lại và giữ bài thực hành cùng tiến độ", async ({ page }) => {
@@ -27,25 +27,20 @@ test("đi tới bài liên kết, quay lại và giữ bài thực hành cùng t
   await page.getByRole("button", { name: /Cắt một đoạn nói rõ ý/ }).first().click();
   await page.getByRole("dialog").getByRole("button", { name: /Bài mẫu: Cắt và sắp xếp/ }).click();
 
-  let detail = page.getByRole("dialog");
+  const detail = page.getByRole("dialog");
   await expect(detail.getByRole("heading", { name: "Cắt và sắp xếp" })).toBeVisible();
   await expect(detail.getByRole("banner")).toHaveCount(0);
   await detail.getByRole("button", { name: "Đang học" }).click();
   await expect(detail.getByRole("button", { name: "Đang học" })).toHaveAttribute("aria-pressed", "true");
-  await detail.getByRole("button", { name: "Chọn cảnh", exact: true }).click();
+  const [study] = await Promise.all([page.waitForEvent("popup"), detail.getByRole("link", { name: "Mở trang học" }).click()]);
+  const [related] = await Promise.all([
+    study.waitForEvent("popup"),
+    study.getByRole("region", { name: "Bài học liên kết" }).getByRole("link", { name: /Chọn cảnh/ }).click(),
+  ]);
+  await expect(related.getByRole("heading", { name: "Chọn cảnh" })).toBeVisible();
+  await related.close();
+  await study.close();
 
-  detail = page.getByRole("dialog");
-  await expect(detail.getByRole("heading", { name: "Chọn cảnh" })).toBeVisible();
-  await expect(detail.getByText("Bài liên kết đến đây")).toBeVisible();
-  await detail.getByRole("button", { name: "Cắt và sắp xếp", exact: true }).click();
-  detail = page.getByRole("dialog");
-  await expect(detail.getByRole("heading", { name: "Cắt và sắp xếp" })).toBeVisible();
-  await detail.getByRole("button", { name: "Quay lại: Chọn cảnh" }).click();
-  detail = page.getByRole("dialog");
-  await expect(detail.getByRole("heading", { name: "Chọn cảnh" })).toBeVisible();
-  await detail.getByRole("button", { name: "Quay lại: Cắt và sắp xếp" }).click();
-
-  detail = page.getByRole("dialog");
   await expect(detail.getByRole("heading", { name: "Cắt và sắp xếp" })).toBeVisible();
   await expect(detail.getByRole("button", { name: "Đang học" })).toHaveAttribute("aria-pressed", "true");
   await detail.getByRole("button", { name: "Đóng bảng chi tiết bài học" }).click();
@@ -58,10 +53,14 @@ test("mở bài liên kết trên màn hình điện thoại và giữ tiêu đi
   await page.goto("/demo");
   await page.getByRole("button", { name: /Cắt một đoạn nói rõ ý/ }).first().click();
   await page.getByRole("dialog").getByRole("button", { name: /Bài mẫu: Cắt và sắp xếp/ }).click();
-  await page.getByRole("dialog").getByRole("button", { name: "Chọn cảnh", exact: true }).click();
-
   const detail = page.getByRole("dialog");
-  await expect(detail.getByRole("heading", { name: "Chọn cảnh" })).toBeVisible();
+  await expect(detail.getByRole("heading", { name: "Cắt và sắp xếp" })).toBeVisible();
   await expect(detail.getByRole("button", { name: "Đóng bảng chi tiết bài học" })).toBeFocused();
+  const [study] = await Promise.all([page.waitForEvent("popup"), detail.getByRole("link", { name: "Mở trang học" }).click()]);
+  const [related] = await Promise.all([
+    study.waitForEvent("popup"),
+    study.getByRole("region", { name: "Bài học liên kết" }).getByRole("link", { name: /Chọn cảnh/ }).click(),
+  ]);
+  await expect(related.getByRole("heading", { name: "Chọn cảnh" })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
 });

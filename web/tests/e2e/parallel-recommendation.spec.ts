@@ -14,10 +14,13 @@ test("tiếp tục học clip thứ hai dù proposal đã xong và nhánh tiếp
   });
   await page.goto("/demo");
   await expect(page.getByText("Bắt đầu: Đọc brief clip mẫu")).toBeVisible();
+  await page.getByRole("button", { name: /Bài thực hành.*15\/36/ }).click();
   await page.getByRole("button", { name: /Tập tiếp cận và ghi lượt gửi/ }).click();
   const brief = page.getByRole("dialog");
   await brief.getByRole("button", { name: "Đã hoàn thành" }).click();
   await brief.getByRole("button", { name: /Đóng bảng hướng dẫn/ }).click();
+  await page.getByRole("button", { name: /Tổng quan lộ trình/ }).click();
   await expect(page.getByText("Bắt đầu: Đọc brief clip mẫu")).toBeVisible();
-  await expect(page.getByRole("button", { name: /Đọc brief clip mẫu/ })).toContainText("Chưa thực hiện");
+  await page.getByRole("button", { name: /Bài thực hành.*16\/36/ }).click();
+  await expect(page.getByRole("button", { name: /Đọc brief clip mẫu/ }).locator("../..")).toContainText("Chưa làm");
 });

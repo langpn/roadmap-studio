@@ -818,7 +818,8 @@ export function Workspace({ catalog, roadmap, initialProgress, userName, account
           nextLessonTitle={nextSelectedLesson?.lesson.title}
           onNextLesson={nextSelectedLesson ? () => navigateFromLesson(nextSelectedLesson.lesson.id) : undefined}
           relatedLessons={relatedLessons}
-          showRelatedLessons={relatedLessons.length > 0 || Boolean(roadmap.lessonConnections?.some((link) => link.from.courseSlug === selectedLessonCtx.course.slug))}
+          showRelatedLessons={relatedLessons.length > 0 || Boolean(roadmap.lessonConnections?.some((link) =>
+            link.from.courseSlug === selectedLessonCtx.course.slug || link.to.courseSlug === selectedLessonCtx.course.slug))}
           onSelectRelatedLesson={navigateFromLesson}
           previousLessonTitle={previousLesson?.lesson.title}
           onPreviousLesson={previousLesson ? navigateBack : undefined}

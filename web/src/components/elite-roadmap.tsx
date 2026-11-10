@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useMemo, useState } from "react";
-import { ArrowRight, BookOpen, Check, ChevronDown, Flag, LayoutGrid, List } from "lucide-react";
+import { ArrowRight, BookOpen, Check, Flag, LayoutGrid, List } from "lucide-react";
 import type { Lesson } from "@/lib/catalog/normalize";
 import type { ProgressState } from "@/lib/progress/store";
 import type { PracticeBriefData } from "./roadmap-data";
@@ -16,14 +16,11 @@ function stateLabel(state: ProgressState | undefined, practice = false) {
   return practice ? "Chưa thực hiện" : "Chưa học";
 }
 
-export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpenPractice, onSelectLessonById }: RoadmapDiagramProps) {
+export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpenPractice, onSelectLessonById, mode }: RoadmapDiagramProps) {
   const id = useId();
-  const course = catalog.courses.find((item) => item.slug === "elite");
+  const course = catalog.courses.find((item) => item.slug === (mode === "demo" ? "demo-basics" : "elite"));
   const lessons = useMemo(() => course?.chapters.flatMap((chapter) => chapter.lessons) ?? [], [course]);
   const nextLesson = lessons.find((lesson) => progress.lessons[lesson.id] !== "completed");
-  const initialChapter = course?.chapters.find((chapter) => chapter.lessons.some((lesson) => lesson.id === nextLesson?.id))?.id
-    ?? course?.chapters[0]?.id;
-  const [expanded, setExpanded] = useState<Set<string>>(() => new Set(initialChapter ? [initialChapter] : []));
   const [view, setView] = useState<"path" | "list">("path");
 
   const nodesByChapter = useMemo(() => {
@@ -32,7 +29,7 @@ export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpe
     const stageMilestones = new Set(roadmap.stages.map((stage) => stage.milestonePracticeId).filter(Boolean));
     for (const practice of roadmap.practices) {
       const related = practice.shortcutLessonIds
-        .filter((link) => link.courseSlug === "elite" && indexById.has(link.id))
+        .filter((link) => link.courseSlug === course?.slug && indexById.has(link.id))
         .sort((a, b) => indexById.get(b.id)! - indexById.get(a.id)!);
       const anchor = related[0]?.id;
       if (anchor) checkpoints.set(anchor, [...(checkpoints.get(anchor) ?? []), practice]);
@@ -56,11 +53,11 @@ export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpe
       const from = `${link.from.courseSlug}\0${link.from.lessonId}`;
       const to = `${link.to.courseSlug}\0${link.to.lessonId}`;
       if (from === to || !valid.has(from) || !valid.has(to)) continue;
-      if (link.from.courseSlug === "elite") related.set(link.from.lessonId, new Set([...(related.get(link.from.lessonId) ?? []), to]));
-      if (link.to.courseSlug === "elite") related.set(link.to.lessonId, new Set([...(related.get(link.to.lessonId) ?? []), from]));
+      if (link.from.courseSlug === course?.slug) related.set(link.from.lessonId, new Set([...(related.get(link.from.lessonId) ?? []), to]));
+      if (link.to.courseSlug === course?.slug) related.set(link.to.lessonId, new Set([...(related.get(link.to.lessonId) ?? []), from]));
     }
     return related;
-  }, [catalog.courses, roadmap.lessonConnections]);
+  }, [catalog.courses, roadmap.lessonConnections, course?.slug]);
 
   if (!course) return <section className={styles.empty} aria-label="Lộ trình Elite">
     <h2>Chưa có giáo trình Elite</h2>
@@ -77,7 +74,7 @@ export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpe
       </defs></svg>
       <div className={styles.intro}>
         <div className={styles.introCopy}>
-          <h2 id={`${id}-heading`}>Lộ trình Elite</h2>
+          <h2 id={`${id}-heading`}>{mode === "demo" ? "Lộ trình mẫu" : "Lộ trình Elite"}</h2>
           <p>{course.title}</p>
           <div className={styles.introMeta}>
             <span><BookOpen size={16} aria-hidden="true" /> {lessons.length} bài học · {course.chapters.length} chương</span>
@@ -100,23 +97,12 @@ export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpe
 
       <div className={styles.chapters}>
         {nodesByChapter.map(({ chapter, nodes }, chapterIndex) => {
-          const isOpen = expanded.has(chapter.id);
           const done = chapter.lessons.filter((lesson) => progress.lessons[lesson.id] === "completed").length;
-          const contentId = `${id}-chapter-${chapterIndex}`;
           return <section className={styles.chapter} key={chapter.id}>
             <h3 className={styles.chapterHeading}>
-              <button type="button" className={styles.chapterToggle} aria-expanded={isOpen} aria-controls={contentId}
-                onClick={() => setExpanded((previous) => {
-                  const next = new Set(previous);
-                  if (next.has(chapter.id)) next.delete(chapter.id); else next.add(chapter.id);
-                  return next;
-                })}>
-                <span className={styles.chapterIndex}>{String(chapterIndex + 1).padStart(2, "0")}</span>
-                <span className={styles.chapterName}>{chapter.title}<span>{done}/{chapter.lessons.length} bài hoàn thành</span></span>
-                <ChevronDown className={isOpen ? styles.chevronOpen : ""} size={20} aria-hidden="true" />
-              </button>
+              <span className={styles.chapterIndex}>{String(chapterIndex + 1).padStart(2, "0")}</span>
+              <span className={styles.chapterName}>{chapter.title}<span>{done}/{chapter.lessons.length} bài hoàn thành</span></span>
             </h3>
-            <div id={contentId} hidden={!isOpen}>
               {nodes.length ? <ol className={styles.nodes}>
                 {nodes.map((node) => {
                   const isLesson = node.kind === "lesson";
@@ -124,7 +110,7 @@ export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpe
                   const state = isLesson ? progress.lessons[nodeId] : progress.practices[nodeId];
                   const isNext = isLesson && nodeId === nextLesson?.id;
                   const related = isLesson ? relatedCounts.get(nodeId)?.size ?? 0 : 0;
-                  return <li className={styles.node} key={`${node.kind}-${nodeId}`}>
+                  return <li className={styles.node} data-kind={isLesson ? "lesson" : node.milestone ? "milestone" : "practice"} key={`${node.kind}-${nodeId}`}>
                     <span className={styles.thread} aria-hidden="true">
                       <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                         <path d="M50 0 C23 16 23 34 50 50 C77 66 77 84 50 100" className={styles.threadShadow} />
@@ -150,7 +136,6 @@ export function EliteRoadmap({ catalog, roadmap, progress, onSelectCourse, onOpe
                   </li>;
                 })}
               </ol> : <p className={styles.noLessons}>Chưa có bài học trong chương này.</p>}
-            </div>
           </section>;
         })}
       </div>

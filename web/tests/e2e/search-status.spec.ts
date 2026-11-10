@@ -30,7 +30,7 @@ test("lọc theo trạng thái chỉ hiện bài đã đánh dấu", async ({ pa
   await results.getByLabel("Trạng thái").selectOption("completed");
   await expect(results.getByText("Sắp xếp tư liệu", { exact: true })).toBeVisible();
   await expect(results.getByRole("heading", { name: "Kết quả tìm kiếm (1 bài phù hợp)" })).toBeVisible();
-  await expect(results.getByText("Đã hoàn thành").first()).toBeVisible();
+  await expect(results.getByRole("button", { name: /Sắp xếp tư liệu/ })).toContainText("Đã hoàn thành");
 });
 
 test("mã bài mở được từ kết quả tìm kiếm và trả về đúng bài", async ({ page }) => {

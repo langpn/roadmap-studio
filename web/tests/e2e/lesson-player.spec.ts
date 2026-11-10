@@ -13,9 +13,9 @@ test("bảng chi tiết dẫn sang trang học riêng thay vì nhúng trình ph�
   await expect(detail.getByRole("link", { name: "Mở trang học" })).toHaveAttribute("href", /^\/bai-hoc\/\d+\?demo=1$/);
   await expect(detail.locator("iframe")).toHaveCount(0);
   await expect(detail.locator("video")).toHaveCount(0);
-  await detail.getByRole("link", { name: "Mở trang học" }).click();
-  await expect(page).toHaveURL(/\/bai-hoc\/\d+\?demo=1$/);
-  await expect(page.getByRole("heading", { name: "Cắt và sắp xếp" })).toBeVisible();
+  const [study] = await Promise.all([page.waitForEvent("popup"), detail.getByRole("link", { name: "Mở trang học" }).click()]);
+  await expect(study).toHaveURL(/\/bai-hoc\/\d+\?demo=1$/);
+  await expect(study.getByRole("heading", { name: "Cắt và sắp xếp" })).toBeVisible();
 });
 
 test("lối vào trang học vẫn dùng được trên điện thoại và không tràn bố cục", async ({ page }) => {

@@ -144,28 +144,11 @@ describe("tra ngược practice theo shortcutLessonIds", () => {
   });
 });
 
-describe("bảng chi tiết bài hiển thị thực hành liên quan", () => {
-  it("liệt kê thực hành kèm lý do và nút mở", () => {
+describe("bảng chi tiết bài", () => {
+  it("để thực hành liên quan trên trang học", () => {
     const html = drawer({ relatedPractices: getPracticesForLesson(demoRoadmap.practices, basics.slug, lesson.id), onOpenPractice: () => {} });
-
-    expect(html).toContain("Bài thực hành dùng bài này");
-    expect(html).toContain("Bài tự luyện của lộ trình, tách khỏi nội dung giảng viên");
-    expect(html).toMatch(/<button[^>]*>[\s\S]*Cắt một đoạn nói rõ ý/);
-  });
-
-  it("không bịa lý do khi liên kết thiếu purpose", () => {
-    const html = drawer({
-      relatedPractices: [{ practice: practice(), link: { id: lesson.id, courseSlug: basics.slug, label: "Bài mẫu" } }],
-      onOpenPractice: () => {},
-    });
-
-    expect(html).toContain("Chưa có giải thích cho liên kết này.");
-  });
-
-  it("nói rõ khi không có thực hành tham chiếu", () => {
-    const html = drawer({ relatedPractices: [], onOpenPractice: () => {} });
-
     expect(html).not.toContain("Bài thực hành dùng bài này");
+    expect(html).toContain(`href="/bai-hoc/${lesson.id}?demo=1"`);
   });
 });
 

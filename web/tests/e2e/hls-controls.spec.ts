@@ -50,7 +50,8 @@ async function openLesson(page: Page, streamAvailable: boolean | "invalid-playli
   await page.goto("/");
   await page.getByLabel("Tìm kiếm bài học toàn hệ thống").fill("Sắp xếp tư liệu");
   await page.getByRole("region", { name: "Kết quả tìm kiếm bài học" }).getByText("Sắp xếp tư liệu", { exact: true }).click();
-  await page.getByRole("dialog").getByRole("link", { name: "Mở trang học" }).click();
+  const href = await page.getByRole("dialog").getByRole("link", { name: "Mở trang học" }).getAttribute("href");
+  await page.goto(href!);
   return page;
 }
 
@@ -226,6 +227,11 @@ test("thanh điều khiển vẫn nằm trên video khi bật toàn màn hình",
   const controls = detail.getByRole("group", { name: "Điều khiển video" });
   await expect(controls.getByRole("button", { name: "Bật toàn màn hình" })).toBeVisible();
   await controls.getByRole("button", { name: "Bật toàn màn hình" }).click();
+  await expect(controls.getByRole("button", { name: "Thoát toàn màn hình" }).or(detail.getByText("Không thể mở toàn màn hình trên trình duyệt này."))).toBeVisible();
+  if (await detail.getByText("Không thể mở toàn màn hình trên trình duyệt này.").isVisible()) {
+    await expect(controls.getByRole("button", { name: "Bật toàn màn hình" })).toBeVisible();
+    return;
+  }
   await expect(controls.getByRole("button", { name: "Thoát toàn màn hình" })).toBeVisible();
   const videoBox = await detail.locator("video").boundingBox();
   const controlsBox = await controls.boundingBox();

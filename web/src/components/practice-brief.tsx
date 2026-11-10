@@ -22,6 +22,7 @@ import type { Catalog } from "@/lib/catalog/normalize";
 import type { ProgressState } from "@/lib/progress/store";
 import styles from "./practice-brief.module.css";
 import { useDialogFocus } from "./use-dialog-focus";
+import { formatPracticeContext } from "@/lib/learning-context";
 
 export interface PracticeBriefProps {
   practice: PracticeBriefData;
@@ -52,6 +53,8 @@ export function PracticeBrief({
   onBack,
 }: PracticeBriefProps) {
   const panelRef = useDialogFocus();
+  const [copyResult, setCopyResult] = useState<{ id: string; status: "copied" | "manual"; text: string } | null>(null);
+  const copyStatus = copyResult?.id === practice.id ? copyResult.status : "idle";
   const [checklist, setChecklist] = useState<{ practiceId: string; items: Record<number, boolean> }>({
     practiceId: practice.id,
     items: {},
@@ -156,6 +159,21 @@ export function PracticeBrief({
                 <span>Đã hoàn thành</span>
               </button>
             </div>
+          </section>
+
+          <section className={styles.block}>
+            <h3 className={styles.blockTitle}>Ghi lại trải nghiệm</h3>
+            <button type="button" className={styles.copyContext} onClick={async () => {
+              const practiceContext = formatPracticeContext(practice, catalog, mode === "demo", window.location.origin);
+              try {
+                await navigator.clipboard.writeText(practiceContext);
+                setCopyResult({ id: practice.id, status: "copied", text: practiceContext });
+              } catch {
+                setCopyResult({ id: practice.id, status: "manual", text: practiceContext });
+              }
+            }}>Sao chép ngữ cảnh cho Obsidian / AI</button>
+            <p className={styles.shortcutDesc} role={copyStatus === "idle" ? undefined : "status"}>{copyStatus === "copied" ? "Đã sao chép. Hãy dán vào ghi chú của bạn." : copyStatus === "manual" ? "Không thể sao chép tự động. Chọn và sao chép nội dung bên dưới." : "Bạn tự bổ sung điều đã làm và kết quả; ứng dụng không tự gửi nội dung ra ngoài."}</p>
+            {copyStatus === "manual" && <textarea className={styles.contextText} aria-label="Ngữ cảnh thực hành để sao chép" readOnly value={copyResult?.text ?? ""} onFocus={(event) => event.currentTarget.select()} />}
           </section>
 
           <section className={styles.block}>

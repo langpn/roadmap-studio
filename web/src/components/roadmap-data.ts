@@ -1,6 +1,7 @@
 import { additionalPractices } from "./roadmap-practices";
 import type { LessonConnection } from "@/lib/catalog/lesson-links";
 import { eliteRelatedLinks } from "@/lib/catalog/elite-related-links";
+import { crossCourseLinks } from "@/lib/catalog/cross-course-links";
 
 export interface PracticeBriefData {
   id: string;
@@ -234,7 +235,7 @@ const allPractices = [...PRACTICES, ...additionalPractices];
 export const privateRoadmap: RoadmapConfig = {
   courseOrder: ROADMAP_COURSE_ORDER,
   courseRoles: COURSE_ROLES,
-  lessonConnections: eliteRelatedLinks,
+  lessonConnections: [...eliteRelatedLinks, ...crossCourseLinks],
   practices: ROADMAP_STAGES.flatMap((stage) => stage.practiceIds)
     .map((id) => allPractices.find((practice) => practice.id === id))
     .filter((practice): practice is PracticeBriefData => Boolean(practice)),

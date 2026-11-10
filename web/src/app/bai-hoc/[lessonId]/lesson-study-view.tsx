@@ -23,6 +23,7 @@ import type { LessonMediaKind } from "@/lib/media/lesson-media-map";
 import type { ProgressState } from "@/lib/progress/store";
 import { readDemoProgress, writeDemoProgress } from "@/lib/progress/demo";
 import { RelatedPractices } from "@/components/related-practices";
+import { formatLearningContext } from "@/lib/learning-context";
 import styles from "./lesson-study.module.css";
 
 const LessonMediaPlayer = dynamic(() => import("@/components/lesson-media-player"), {
@@ -104,6 +105,8 @@ export function LessonStudyView({
   // Bản cá nhân đang ghi nhận lượt mở bài; khóa nút cho tới khi có phiên bản mới.
   const [opening, setOpening] = useState(mode === "private");
   const [notice, setNotice] = useState<Notice | null>(null);
+  const [copyResult, setCopyResult] = useState<{ id: string; status: "copied" | "manual"; text: string } | null>(null);
+  const copyStatus = copyResult?.id === lesson.id ? copyResult.status : "idle";
   const versionRef = useRef<string | null>(initialVersion);
 
   // Ghi nhận bài vừa mở để lộ trình gợi ý đúng; lỗi ở đây không chặn việc học.
@@ -339,7 +342,18 @@ export function LessonStudyView({
                     : "Chưa có mô tả đã đối chiếu chữ; bạn vẫn có thể mở trang bài gốc để xem tài liệu."}
                 </p>
               )}
-              <p className={styles.hint}>Mô tả chỉ tóm tắt phần chữ của trang bài học, không phải nội dung video.</p>
+              <p className={styles.hint}>Thông tin lấy từ phần chữ trên trang bài học, không phải nội dung video.</p>
+              <button type="button" className={styles.copyContext} onClick={async () => {
+                const learningContext = formatLearningContext(course, lesson, relatedPractices, mode === "demo", window.location.origin);
+                try {
+                  await navigator.clipboard.writeText(learningContext);
+                  setCopyResult({ id: lesson.id, status: "copied", text: learningContext });
+                } catch {
+                  setCopyResult({ id: lesson.id, status: "manual", text: learningContext });
+                }
+              }}>Sao chép ngữ cảnh cho Obsidian / AI</button>
+              <p className={styles.hint} role={copyStatus === "idle" ? undefined : "status"}>{copyStatus === "copied" ? "Đã sao chép. Hãy dán vào ghi chú của bạn." : copyStatus === "manual" ? "Không thể sao chép tự động. Chọn và sao chép nội dung bên dưới." : "Bạn tự bổ sung trải nghiệm; ứng dụng không tự gửi nội dung ra ngoài."}</p>
+              {copyStatus === "manual" && <textarea className={styles.contextText} aria-label="Ngữ cảnh bài học để sao chép" readOnly value={copyResult?.text ?? ""} onFocus={(event) => event.currentTarget.select()} />}
             </section>
 
             {mode === "private" && (
@@ -382,7 +396,7 @@ export function LessonStudyView({
             {groups.length > 0 ? (
               <section className={styles.section} aria-labelledby="lesson-related-title">
                 <h2 id="lesson-related-title" className={styles.sectionHeading}>Bài học liên kết</h2>
-                <p className={styles.hint}>Gợi ý theo tiêu đề và chủ đề; nội dung video chưa được xác minh.</p>
+                <p className={styles.hint}>Gợi ý tham khảo; mức bằng chứng ghi ở từng mục, chưa mục nào xác minh nội dung video.</p>
                 {groups.map((group) => (
                   <div key={group.label} className={styles.relatedGroup}>
                     <h3 className={styles.relatedHeading}>{group.label} <span>({group.items.length})</span></h3>
@@ -390,11 +404,12 @@ export function LessonStudyView({
                       {group.items.map((item) => (
                         <li key={`${item.lesson.courseSlug}:${item.lesson.id}`} className={styles.relatedItem}>
                           <span className={styles.relatedCourse}>{item.courseTitle}</span>
-                          <Link className={styles.relatedLink} href={`/bai-hoc/${item.lesson.id}${studySuffix}`}>
+                          <Link className={styles.relatedLink} href={`/bai-hoc/${item.lesson.id}${studySuffix}`} target="_blank" rel="noopener noreferrer">
                             <span>{item.lesson.title}</span>
                             <ArrowRight size={15} aria-hidden="true" />
                           </Link>
                           <p className={styles.relatedReason}>{item.reason}</p>
+                          <p className={styles.relatedReason}>{item.basisLabel}{item.evidence ? ` — ${item.evidence}` : ""}</p>
                         </li>
                       ))}
                     </ul>

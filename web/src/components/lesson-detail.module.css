@@ -230,6 +230,13 @@
   line-height: 1.5;
 }
 
+.studyHint:first-child {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
 .studyLink {
   display: inline-flex;
   align-items: center;
@@ -410,7 +417,7 @@
 }
 
 .relatedIntro {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .relatedGroup {
@@ -436,16 +443,36 @@
 
 .relatedList {
   display: grid;
-  gap: 14px;
+  gap: 0;
   margin: 0;
-  padding: 0 0 16px;
+  padding: 0;
+  border-top: 1px solid #e2e8f0;
   list-style: none;
 }
 
 .relatedItem {
   display: grid;
-  gap: 3px;
+  gap: 6px;
   min-width: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.relatedMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+
+.relatedKind {
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .relatedCourse {
@@ -460,7 +487,8 @@
   justify-content: space-between;
   gap: 8px;
   width: 100%;
-  padding: 2px 0;
+  min-height: 32px;
+  padding: 3px 0;
   border: 0;
   background: transparent;
   color: #4338ca;
@@ -480,6 +508,9 @@
   flex-shrink: 0;
   margin-top: 2px;
 }
+
+.relatedLink:hover { color: #312e81; text-decoration: underline; text-underline-offset: 3px; }
+.relatedLink:focus-visible { outline: 2px solid #4f46e5; outline-offset: 3px; border-radius: 2px; }
 
 .nextSection {
   display: flex;

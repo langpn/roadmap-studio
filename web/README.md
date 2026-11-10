@@ -47,6 +47,12 @@ Trong bản cá nhân, chọn **Khám phá bài học liên kết** ở trang t�
 
 Các liên kết được người soạn đề xuất theo tiêu đề và chủ đề của danh mục đã lưu; chưa xác minh nội dung video. Bài chưa có liên kết vẫn được học bình thường. Demo dùng một mạng nhỏ bằng bài mẫu.
 
+## Ghi lại điều đã thực hành trong Obsidian
+
+Trên trang học hoặc trong bảng hướng dẫn thực hành, chọn **Sao chép ngữ cảnh cho Obsidian / AI**. Nội dung gồm tên và mã bài hoặc thực hành, các liên kết sẵn có và giới hạn bằng chứng. Nếu trình duyệt không cho phép sao chép, chọn nội dung trong ô hiện ra và tự sao chép. Demo chỉ cung cấp dữ liệu mẫu. Ứng dụng không tự gửi ngữ cảnh đi đâu hoặc mở vault của bạn.
+
+Dán ngữ cảnh vào một ghi chú Obsidian, sau đó bổ sung điều bạn đã thử, khó khăn, kết quả và một ý có thể áp dụng lần sau. Bạn có thể tự đưa những thông tin đó cho AI để viết nháp; kiểm tra lại mọi kết luận và liên kết trước khi lưu. Tiêu đề hoặc chữ trên trang bài không chứng minh nội dung video. Ghi chú và sao lưu vault do bạn quản lý.
+
 ## Xem video bài học
 
 Trong bản cá nhân, chọn một bài trên lộ trình rồi chọn **Mở trang học** để xem video, mô tả đã đối chiếu và các bài liên quan. Có thể chuyển sang bài trước hoặc bài tiếp theo trong cùng giáo trình. Bảng chi tiết cũng có nút **Xem bài học trên website gốc** để mở trang nguồn trong cửa sổ riêng; cửa sổ dùng phiên đăng nhập và trình phát của website gốc.
@@ -74,7 +80,7 @@ Nếu nguồn hoặc trình duyệt không hỗ trợ phát trực tiếp, ứng
 ## Dữ liệu và giới hạn
 
 - Danh mục, cơ sở dữ liệu, tệp môi trường và tài liệu khóa học riêng không có trong Git; mỗi người tự chuẩn bị dữ liệu của mình.
-- Dữ liệu tài khoản và tiến độ cục bộ nằm trong `web/.data/`; giữ riêng và sao lưu thư mục này.
+- Dữ liệu tài khoản và tiến độ cục bộ nằm trong `web/.data/`; dừng ứng dụng trước khi sao lưu theo [hướng dẫn vận hành local](docs/van-hanh-local.md).
 - Mã nguồn có một số tên khóa và ID bài trong các gợi ý được soạn sẵn; chúng không bao gồm tệp video hay thông tin phiên. Cần xem lại mã và quyền đối với tài liệu trước khi chia sẻ.
 - Không cần SMTP để đăng nhập hoặc tạo liên kết mời local; xác minh email và đặt lại mật khẩu cần cấu hình thư riêng.
 

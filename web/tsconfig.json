@@ -55,7 +55,9 @@
     ".next-media-controls/types/**/*.ts",
     ".next-media-controls/dev/types/**/*.ts",
     ".next-demo-audit/types/**/*.ts",
-    ".next-demo-audit/dev/types/**/*.ts"
+    ".next-demo-audit/dev/types/**/*.ts",
+    ".next-local-ops/types/**/*.ts",
+    ".next-local-ops/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

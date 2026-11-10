@@ -19,12 +19,13 @@ test("demo chỉ hiển thị dữ liệu mẫu và các thao tác có thể s�
   await expect(brief.getByRole("button", { name: "Đã hoàn thành" })).toHaveAttribute("aria-pressed", "true");
   await page.reload();
   await expect(page.getByRole("button", { name: practiceCount(1) })).toBeVisible();
+  await page.getByRole("button", { name: practiceCount(1) }).click();
   await expect(page.getByRole("button", { name: /Bài tập số 2: Dựng clip có hình minh họa/ })).toBeVisible();
 });
 
 test("mã trình duyệt của demo không chứa tên hay URL khóa học thật", async ({ page }) => {
   const response = await page.goto("/demo");
-  expect(await response!.text()).not.toMatch(/Baby Resolve|\bElite\b|baby-resolve|elite-pro|freelance-mvp|seankangmvp\.com/i);
+  expect(await response!.text()).not.toMatch(/Baby Resolve|Elite Pro|baby-resolve|elite-pro|freelance-mvp|seankangmvp\.com/i);
   const leaks = await page.evaluate(async () => {
     const scripts = Array.from(document.querySelectorAll<HTMLScriptElement>("script[src]"));
     const contents = await Promise.all(scripts.map(async (script) => (await fetch(script.src)).text()));
@@ -63,9 +64,11 @@ test("menu điện thoại chỉ nhận focus khi mở và đóng bằng Escape"
 
 test("gợi ý theo tiến độ dù làm lệch thứ tự và sau khi mở bài tham khảo", async ({ page }) => {
   await page.goto("/demo");
+  await page.getByRole("button", { name: practiceCount(0) }).click();
   await page.getByRole("button", { name: /Bài tập số 2: Dựng clip có hình minh họa/ }).click();
   await page.getByRole("dialog").getByRole("button", { name: "Đã hoàn thành" }).click();
   await page.getByRole("dialog").getByRole("button", { name: /Đóng bảng hướng dẫn/ }).click();
+  await page.getByRole("button", { name: /Tổng quan lộ trình/ }).click();
   await expect(page.getByText("Bắt đầu: Chuẩn bị project và tư liệu")).toBeVisible();
   await page.getByRole("button", { name: "Mở việc cần làm" }).click();
   const practice = page.getByRole("dialog");
@@ -91,8 +94,8 @@ test("giữ tiến độ bài tập cũ khi mở roadmap mới", async ({ page }
   await page.goto("/demo");
   await expect(page.getByRole("button", { name: practiceCount(1) })).toBeVisible();
   await expect(page.getByRole("button", { name: /Bài tập số 1: Dựng clip talking-head ngắn/ })).toContainText("Đã hoàn thành");
-  await expect(page.getByRole("button", { name: /Bài tập số 2: Dựng clip có hình minh họa/ })).toContainText("Đang thực hiện");
-  await expect(page.getByText("Bắt đầu: Chuẩn bị project và tư liệu")).toBeVisible();
+  await page.getByRole("button", { name: practiceCount(1) }).click();
+  await expect(page.getByRole("button", { name: /Bài tập số 2: Dựng clip có hình minh họa/ }).locator("../..")).toContainText("Đang làm");
 });
 
 test("đọc được mã thực hành của bản demo đời đầu", async ({ page }) => {
@@ -103,7 +106,8 @@ test("đọc được mã thực hành của bản demo đời đầu", async ({
   });
   await page.goto("/demo");
   await expect(page.getByRole("button", { name: practiceCount(1) })).toBeVisible();
-  await expect(page.getByRole("button", { name: /Bài tập số 2: Dựng clip có hình minh họa/ })).toContainText("Đang thực hiện");
+  await page.getByRole("button", { name: practiceCount(1) }).click();
+  await expect(page.getByRole("button", { name: /Bài tập số 2: Dựng clip có hình minh họa/ }).locator("../..")).toContainText("Đang làm");
 });
 
 test("trạng thái mới được ưu tiên khi còn mã thực hành cũ", async ({ page }) => {
@@ -188,7 +192,8 @@ test("không báo hoàn thành toàn bộ khi chỉ còn bước được bỏ q
   await page.goto("/demo");
   await expect(page.getByText("Các bước còn lại cần bạn chủ động chọn")).toBeVisible();
   await expect(page.getByText("Bạn đã hoàn thành các bước trong lộ trình")).toHaveCount(0);
-  await expect(page.getByRole("button", { name: /Clip mẫu: chọn ý và cắt thô/ })).toContainText("Chưa thực hiện");
+  await page.getByRole("button", { name: practiceCount(PRACTICE_IDS.length - 1) }).click();
+  await expect(page.getByRole("button", { name: /Clip mẫu: chọn ý và cắt thô/ }).locator("../..")).toContainText("Chưa làm");
 });
 
 test("chỉ gợi ý bước chờ sau khi người học chủ động bắt đầu", async ({ page }) => {
@@ -202,14 +207,17 @@ test("chỉ gợi ý bước chờ sau khi người học chủ động bắt đ
   }, [...PRACTICE_IDS]);
   await page.goto("/demo");
   await expect(page.getByText("Các bước còn lại cần bạn chủ động chọn")).toBeVisible();
+  await page.getByRole("button", { name: practiceCount(PRACTICE_IDS.length - 5) }).click();
   await page.getByRole("button", { name: /Tập ghi trao đổi và làm rõ/ }).click();
   const brief = page.getByRole("dialog");
   await brief.getByRole("button", { name: "Đang thực hiện" }).click();
   await brief.getByRole("button", { name: /Đóng bảng hướng dẫn/ }).click();
+  await page.getByRole("button", { name: /Tổng quan lộ trình/ }).click();
   await expect(page.getByText("Tiếp tục: Tập ghi trao đổi và làm rõ")).toBeVisible();
   await page.reload();
   await expect(page.getByText("Tiếp tục: Tập ghi trao đổi và làm rõ")).toBeVisible();
-  await expect(page.getByRole("button", { name: /Tập ghi thỏa thuận giả lập/ })).toContainText("Chưa thực hiện");
+  await page.getByRole("button", { name: practiceCount(PRACTICE_IDS.length - 5) }).click();
+  await expect(page.getByRole("button", { name: /Tập ghi thỏa thuận giả lập/ }).locator("../..")).toContainText("Chưa làm");
 });
 
 test("mở bài bằng bàn phím và giữ tiến độ demo sau tải lại", async ({ page }) => {
@@ -228,8 +236,9 @@ test("mở bài bằng bàn phím và giữ tiến độ demo sau tải lại", 
   await page.keyboard.press("Shift+Tab");
   expect(await detail.evaluate((node) => node.contains(document.activeElement))).toBe(true);
   await detail.getByRole("button", { name: "Đã hoàn thành" }).click();
-  await detail.getByRole("button", { name: /Bài tiếp theo.*Tạo project/ }).click();
-  await expect(detail.getByRole("heading", { name: "Tạo project" })).toBeVisible();
+  await detail.getByRole("button", { name: "Đóng bảng chi tiết bài học" }).click();
+  await page.getByRole("button", { name: /Tạo project/ }).first().click();
+  await expect(page.getByRole("dialog").getByRole("heading", { name: "Tạo project" })).toBeVisible();
   await page.reload();
   await expect(page.getByRole("button", { name: /Làm quen dựng phim 1\/6/ })).toBeVisible();
   await expect(page.getByText("Bắt đầu: Chuẩn bị project và tư liệu")).toBeVisible();

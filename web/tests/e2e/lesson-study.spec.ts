@@ -8,11 +8,11 @@ test("trang học bài mở được từ liên kết trong bảng chi tiết", 
   const link = page.getByRole("dialog").getByRole("link", { name: "Mở trang học" });
   await expect(link).toHaveAttribute("href", /^\/bai-hoc\/90003(\?demo=1)?$/);
 
-  await link.click();
-  await expect(page.getByRole("heading", { level: 1, name: "Cắt và sắp xếp" })).toBeVisible();
-  await expect(page.getByText("Bản thử nghiệm", { exact: true })).toBeVisible();
-  await expect(page.getByText(/Video mẫu chỉ để thử trình phát/)).toBeVisible();
-  await expect(page.getByText("Đăng nhập")).toHaveCount(0);
+  const [study] = await Promise.all([page.waitForEvent("popup"), link.click()]);
+  await expect(study.getByRole("heading", { level: 1, name: "Cắt và sắp xếp" })).toBeVisible();
+  await expect(study.getByText("Bản thử nghiệm", { exact: true })).toBeVisible();
+  await expect(study.getByText(/Video mẫu chỉ để thử trình phát/)).toBeVisible();
+  await expect(study.getByText("Đăng nhập")).toHaveCount(0);
 });
 
 test("bài trước và bài tiếp đi qua ranh giới chương, giữ ?demo=1", async ({ page }) => {

@@ -24,7 +24,6 @@ test("lộ trình Elite mở bài thật theo thứ tự và chuyển được g
 
   await roadmap.getByRole("button", { name: "Danh sách", exact: true }).click();
   await expect(roadmap.getByRole("button", { name: "Danh sách", exact: true })).toHaveAttribute("aria-pressed", "true");
-  await roadmap.getByRole("button", { name: /Hoàn thiện clip/ }).click();
   await expect(roadmap.getByRole("button", { name: /Xuất bản thử/ })).toBeVisible();
 });
 
